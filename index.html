@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Minimalismtraining Website</title>
+	  <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="css/flickity.css" media="screen">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+      <section id="main" class="section">
+         <div class="air">
+         </div>
+         <h1 id="logo1">Minimalism</h1>
+         <h3>Training</h3>
+         <div class="container">
+            <div class="vl"></div>
+         </div>
+         <h4>Start your journey today</h4>
+         <p>Scroll Down</p>
+         <div class="air">
+         </div>
+      </section>
+      <section id="form" class="section">
+         <form>
+            <div id="form-progress">
+               <div id="progress_1" class="numberCircle current">1</div>
+               <div id="progress_1" class="progress-separator"></div>
+               <div id="progress_2" class="numberCircle">2</div>
+               <div id="progress_2" class="progress-separator"></div>
+               <div id="progress_3" class="numberCircle">3</div>
+               <div id="progress_3" class="progress-separator"></div>
+               <div id="progress_4" class="numberCircle">4</div>
+               <div id="progress_4" class="progress-separator"></div>
+               <div id="progress_5" class="numberCircle">5</div>
+            </div>
+            <div id="form-qs">
+               <div id="form-q1">
+                  <label for="q1">How can I help you?</label> <br>
+                  <div class="form-a">
+                     <button type="button" class="qbutton" onclick="">Build muscle</button><br>
+                     <button type="button" class="qbutton" onclick="">Weight loss</button><br>
+                     <button type="button" class="qbutton" onclick="">Healthy lifestyle</button><br>
+                  </div>
+               </div>
+               <div id="form-q2" class="hidden">
+                  <label for="q2">What is currently holding you back from reaching your goals?</label><br>
+                  <div class="form-a">
+                     <textarea placeholder="Your Motivation..." id="q2" spellcheck="true"></textarea>
+                  </div>
+               </div>
+               <div id="form-q3" class="hidden">
+                  <label for="q3">What is your motivation to start now?</label><br>
+                  <div class="form-a">
+                     <textarea placeholder="Your Motivation..." id="q3" spellcheck="true"></textarea>
+                  </div>
+               </div>
+               <div id="form-q4" class="hidden">
+                  <label for="q4">Are you ready to commit financially & time wise through online coaching, work out plans and accountability to reach your goals for a minimum of 3 months?</label><br>
+                  <div class="form-a">
+                     <button type="button" class="qbutton" onclick="">Yes!</button><br>
+                     <button type="button" class="qbutton" onclick="">Yes, but I am nervous</button><br>
+                  </div>
+               </div>
+               <div id="form-q5" class="hidden">
+                  <label for="q5">Last step! Fill in the form:</label><br>
+                  <div class="form-a">
+                     <label for="q51">Your full name</label>
+                     <input type="text" placeholder="Name" id="q51" name="q51"><br>
+                     <label for="q52">Your email</label>
+                     <input type="text" placeholder="example@gmail.com" id="q52" name="q52"><br>
+                     <label for="q53">Phone number</label>
+                     <input type="text" placeholder="+31 6 12345678" id="q53" name="q53"><br>
+                     <label for="q54">Country</label>
+                     <select id="q54" name="country">
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="AF">Afghanistan</option>
+                        <option value="AX">Aland Islands</option>
+                        <option value="AL">Albania</option>
+                     </select>
+                     <br>
+                     
+                  </div>
+                  <div>
+				  <p>
+                        When you submit the form, we process the personal data you provide. You can read more about Akbar Abawi’s processing of your personal data and your rights in our data policy.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div id="form-buttons">
+               <button id="form-button-back" class="" type="button" onclick="go_back()">Back</button>
+               <button id="form-button-next" class="" type="button" onclick="go_next()">Next</button>
+            </div>
+            <div id="form-post" class="hidden">
+               <h3>The first step is in the bag! High-fives all around!</h3>
+               <p>Well done, the first step has been taken. I will contact you within 48 hours. I'm looking forward to it! Looking forward to having you a part of my team very soon!</p>
+            </div>
+         </form>
+      </section>
+      <section id="slogan" class="section">
+         <h5>
+         Click and find out more</h3>
+         <h2>
+         Busy Being Boring</h1>
+      </section>
+      <section id="clients" class="section">
+         <h1>Client Transformations</h1>
+         <div class="gallery js-flickity">
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+         </div>
+      </section>
+      <section id="offer" class="section">
+         <h1>What do you get</h1>
+         <div class="gallery js-flickity">
+            <div class="gallery-cell">
+               <div class="gallery-cell-top"></div>
+               <div class="gallery-cell-bot">
+					<h5>Training</h5>
+					<p>A customized plan for you to suit you anytime and anywhere.</p>
+               </div>
+            </div>
+            <div class="gallery-cell">
+               <div class="gallery-cell-top"></div>
+               <div class="gallery-cell-bot">
+					<h5>Nutrition</h5>
+					<p>Your custom meal plan is made for a healthy lifestyle.</p>
+               </div>
+            </div>
+            <div class="gallery-cell">
+               <div class="gallery-cell-top"></div>
+               <div class="gallery-cell-bot">
+					<h5>Progress tracking</h5>
+					<p>We track your progress through weekly check-ins to ensure you stay on track with your goals.</p>
+               </div>
+            </div>
+            <div class="gallery-cell">
+               <div class="gallery-cell-top"></div>
+               <div class="gallery-cell-bot">
+					<h5>Continuous communication</h5>
+					<p>I am always only a text away for accountability and support. We got this!</p>
+               </div>
+            </div>
+         </div>
+         <div id="everfit">
+         <h3>Powered by Everfit</h3>
+         </div>
+      </section>
+      <section id="howto" class="section">
+         <div id="howto-step1" class="howto-step">
+            <h3>Step 1</h3>
+            <h1>Fill out the form</h1>
+            <p>To start this journey, complete my form so we can get in touch!</p>
+            <p>Go to form</p>
+         </div>
+         <div id="howto-step2" class="howto-step">
+            <h3>Step 2</h3>
+            <h1>Phone call</h1>
+            <p>Expect to have a call within 48 hours to discuss the best plan for you to reach your goals.</p>
+         </div>
+         <div id="howto-step3" class="howto-step">
+            <h3>Step 3</h3>
+            <h1>Coaching</h1>
+            <p>We work together to form healthy and sustainable habits.</p>
+         </div>
+      </section>
+      <section id="employee" class="section">
+         <h1>Meet Ak!</h1>
+         <p>My love and passion for health & fitness and helping you reach your goals gives me energy. My mission is to challenge you to realise your potential. We will work hard, go inward to claim the greatness we long for, and attain immense confidence and self-love. Let’s get to work! </p>
+         <p>Online coaching allows you to reach your goals whilst having me as your coach from anywhere. Developing a healthy, active lifestyle with your busy schedule and other responsibilities is now realistic and sustainable with my system. I will be there every step of the way to guide you, motivate you, and hold you accountable for the goals you are more than capable of achieving.</p>
+      
+		
+         <h1>IMAGE</h1>
+	  </section>
+	  
+	 
+      <section id="faq" class="section">
+	  
+	  <h1>FAQ</h1>
+  <div class="faq">
+    <div class="faq-item">
+      <button id="faq-button-1" aria-expanded="false"><span class="faq-question">What can I expect from working with you?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>You can expect a personalised experience. I want to create relationships with all my clients so I can help you work hard on what you need to work on today. It won’t be numbers driven only. When you join my team, we will change your lifestyle profoundly. Your training and nutrition will be sustainable, consistent and, most importantly, enjoyable. A personalised check-in process will ensure that you are moving towards your goals, and through our communication, I can support you on every step of your journey.</p>
+      </div>
+    </div>
+	
+    <div class="faq-item">
+      <button id="faq-button-2" aria-expanded="false"><span class="faq-question">I already have a Personal Trainer. Is this for me?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>I aim to be the best online personal training on the market – at any price and for anyone. Give it a try, compare it to your current use, and let me know what you think. As someone already well-versed in fitness, your opinion is incredibly important, and I want to hear it.</p>
+      </div>
+    </div>
+	
+    <div class="faq-item">
+      <button id="faq-button-3" aria-expanded="false"><span class="faq-question">I’m not too familiar with fitness. Is this for me?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>100%. We’ve all had a different discovery moment, and I want Minimalism Training to be that for you. I’ve built the experience to be simple, minimalistic, easy, satisfying and, above all else, effective. It works and should be the only thing you need to reach your goals.</p>
+      </div>
+    </div>
+	
+    <div class="faq-item">
+      <button id="faq-button-4" aria-expanded="false"><span class="faq-question">How much does it cost?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>All my clients receive bespoke and tailored plans alongside my ongoing support and guidance. Prices will vary depending on your commitment period and goals; however, multiple packages are available to suit all budgets.</p>
+      </div>
+    </div>
+	
+    <div class="faq-item">
+      <button id="faq-button-5" aria-expanded="false"><span class="faq-question">What will my meal plan look like? Do you cater for dietary restrictions?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>Your nutrition is the most important part of your new journey. Plans should be sustainable and enjoyable. I want to help you to make lifestyle changes rather than simply adhering to boring or strict diets! To achieve the desired results, it is important to create a healthy balance between having a good relationship with food and understanding what you must pay attention to (i.e. portion sizes, calories, macros). Also, we will facilitate any allergies or dietary restrictions you might have (i.e. coeliac, lactose intolerant or vegan).</p>
+      </div>
+    </div>
+	
+    <div class="faq-item">
+      <button id="faq-button-6" aria-expanded="false"><span class="faq-question">Can I track my progress and update my measurements?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>You can track all progress and measurements through my app on your phone. This includes photos, body measurements, weigh-ins, diet or water intake. That way, I can monitor your progress and make any necessary adjustments to your goals or plans.</p>
+      </div>
+    </div>
+	
+    <div class="faq-item">
+      <button id="faq-button-7" aria-expanded="false"><span class="faq-question">Can I train from home?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>Of course, you can! I can create a plan around your preferred location and fit around your goals and lifestyle.</p>
+      </div>
+    </div>
+	
+    <div class="faq-item">
+      <button id="faq-button-8" aria-expanded="false"><span class="faq-question">How often should I exercise per week?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>You decide how much time per week you have for training and your goal. Together we will make a plan so that exercising fits into your routine in the best possible way.</p>
+      </div>
+    </div>
+	
+    <div class="faq-item">
+      <button id="faq-button-9" aria-expanded="false"><span class="faq-question">How soon can I expect to see results?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="faq-answer">
+        <p>Everyone’s body reacts and adapts to exercise differently so that we will work with you at the best pace for you. The training will be broken down into phases of 6 weeks to ensure you progress towards your goals and training at the right intensity. For the first part of the program, you will commit to at least 12 weeks to ensure we can obtain noticeable progress.
+
+I have had some clients achieve the results they’ve wanted in a matter of weeks, some in a matter of months – both dropping vast amounts of body fat, but all at different rates. Results depend on numerous factors like your tailored nutrition and workout plans, commitment in- and outside the gym and how much work you put in. If you are willing to commit fully, I can guarantee that you will make progress. You do not have to be perfect; just be better than you are now.</p>
+      </div>
+  </div>
+</div>
+		 
+		 
+		 
+      </section>
+      <section id="foot" class="section">
+         <h1>Minimalism</h1>
+         <h2>Training</h2>
+         <h3>Terms and conditions</h3>
+         <h3>Privacy Policy</h3>
+         <p>Insta Icon</p>
+         <p>Tiktok Icon</p>
+         <p>Made with passion 🔥 in the Netherlands </p>
+         <p>© Minimalismtraining 2023.</p>
+         <p>All rights reserved.</p>
+      </section>
+   </body>
+   <script src="js/circletype.min.js"></script>
+   <script src="js/flickity.pkgd.min.js"></script>
+   <script src="js/form.js"></script>
+   <script src="js/logo.js"></script>
+   <script src="js/faq.js"></script>
+</html>
