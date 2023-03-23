@@ -53,7 +53,7 @@ window.onload = function () {
   // Add click event listener to each button
   if (q51 && q52 && q53 && q54) {
     inputs.forEach((input) => {
-      input.addEventListener('change', function () {
+      input.addEventListener('input', function () {
         if (
           q51.value.trim() !== '' &&
           q52.value.trim() !== '' &&
@@ -64,6 +64,18 @@ window.onload = function () {
           complete_section();
         }
       });
+    });
+
+    q54.addEventListener('change', function () {
+      if (
+        q51.value.trim() !== '' &&
+        q52.value.trim() !== '' &&
+        q53.value.trim() !== '' &&
+        q54.selectedIndex > 0
+      ) {
+        // check if the input value is non-empty after trimming whitespace
+        complete_section();
+      }
     });
   }
 

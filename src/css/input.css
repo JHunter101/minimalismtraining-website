@@ -34,10 +34,6 @@ body {
   margin: auto;
 }
 
-.h-80-screen {
-  height: 80vh;
-}
-
 /*-------------------------------------------------------------- # Base Section End--------------------------------------------------------------*/
 
 /*-------------------------------------------------------------- # General Section Start--------------------------------------------------------------*/
@@ -54,7 +50,7 @@ body {
 h1,
 h2 {
   text-align: center;
-  font-size: min(6vh, 40px);
+  font-size: min(9vw, 60px);
   margin: min(1.5vh, 10px) 0;
   font-weight: 800;
 }
@@ -63,17 +59,14 @@ h3,
 h4 {
   text-align: center;
   text-transform: capitalize;
-  font-size: min(3vh, 20px);
-  line-height: min(3vh, 20px);
+  font-size: min(6vw, 40px);
   font-weight: 600;
 }
 
 h5,
 h6,
 p {
-  text-transform: capitalize;
-  font-size: min(2vh, 13.3px);
-  line-height: min(2vh, 13.3px);
+  font-size: min(4vw, 26.7px);
   text-align: left;
   font-weight: 400;
 }
@@ -117,29 +110,20 @@ h6 {
 }
 
 #main h1 {
-  font-size: min(7.5vh, 50px);
+  font-size: min(12vw, 80px);
   font-weight: 1000;
-  letter-spacing: min(0.06vh, 0.4px);
-  line-height: min(9vh, 60px);
+  letter-spacing: min(0.12vw, 0.8px);
 }
 
 #main h3 {
-  font-size: min(6vh, 40px);
-  letter-spacing: min(0.9vh, 6px);
+  letter-spacing: min(0.9vw, 6px);
   text-shadow: 0px min(0.15vh, 1px) min(0.15vh, 1px) rgba(0, 0, 0, 0.25);
 }
 
 #main h4 {
-  letter-spacing: min(0.3vh, 2px);
+  letter-spacing: min(0.6vw, 2px);
   text-shadow: 0px 0px min(0.3vh, 2px) rgba(0, 0, 0, 0.25);
 }
-
-#main p {
-  font-size: min(3vh, 20px);
-  line-height: min(3vh, 20px);
-}
-
-/* Arrow */
 
 /*-------------------------------------------------------------- # main Section End --------------------------------------------------------------*/
 
@@ -167,31 +151,35 @@ h6 {
   color: grey;
 
   border-radius: 50%;
-  border: 2px solid grey;
+  border: min(0.3vh, 2px) solid grey;
   aspect-ratio: 1/1;
 
-  font-size: min(3vh, 20px);
+  font-size: min(4.5vw, 30px);
 }
 
 #form #form-progress .numberCircle.current {
   background: #fff;
-  border: 2px solid var(--font-green-color);
+  border: min(0.3vh, 2px) solid var(--font-green-color);
   color: var(--font-green-color);
 }
 
 #form #form-progress .numberCircle.progressed {
   background: var(--font-green-color);
-  border: 2px solid white;
+  border: min(0.3vh, 2px) solid white;
   color: white;
 }
 
 #form #form-progress .progress-separator {
-  border-bottom: 2px solid grey;
+  border-bottom: min(0.3vh, 2px) solid grey;
 }
 
 /* QA */
+#form #form-qs {
+  height: 40vh;
+}
+
 #form label {
-  font-size: min(3vh, 20px);
+  font-size: min(4.5vw, 30px);
 }
 
 #form .form-a {
@@ -201,12 +189,12 @@ h6 {
 #form .form-a textarea {
   border-radius: min(0.9vh, 60px);
   padding: min(3vh, 20px);
-  width: 80%;
+  width: 100%;
   height: min(36vh, 240px);
 }
 
 #form #form-q5 .form-a label {
-  font-size: min(2vh, 13.3px);
+  font-size: min(3vw, 20px);
   display: inline-block;
   width: 34%;
   text-align: left;
@@ -234,7 +222,7 @@ h6 {
 }
 
 #form #form-q5 p {
-  font-size: min(1.5vh, 10px);
+  font-size: min(2vw, 13.3px);
 }
 
 /* Buttons */
@@ -244,7 +232,7 @@ h6 {
   width: min(95%, 500px);
   height: min(7.5vh, 50px);
 
-  font-size: min(3vh, 20px);
+  font-size: min(4.5vw, 30px);
   color: var(--font-green-color);
 
   border-radius: min(1.5vh, 10px);
@@ -257,7 +245,7 @@ h6 {
 }
 
 #form #form-buttons button {
-  width: min(15vh, 100px); /* TODO */
+  width: min(24vw, 160px);
 }
 
 #form #form-buttons button.completed {
@@ -267,12 +255,14 @@ h6 {
 
 /* Post */
 #form #form-post h3 {
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: min(6vw, 40px);
+  line-height: min(4.5vh, 30px);
+  margin-bottom: min(3vh, 20px);
   text-align: left;
 }
 
 #form #form-post p {
+  line-height: min(3vh, 20px);
 }
 
 /*-------------------------------------------------------------- # form Section End --------------------------------------------------------------*/
@@ -284,7 +274,7 @@ h6 {
 }
 
 #slogan h2 {
-  font-size: 2em;
+  font-size: min(9vw, 60px);
   line-height: 2.5em;
   letter-spacing: 0.03em;
 }
@@ -377,6 +367,30 @@ h6 {
   padding: 2em 0;
 }
 
+/* smaller, dark, rounded square */
+#offer .flickity-button {
+  background: #333;
+}
+#offer .flickity-button:hover {
+  background: #f90;
+}
+
+#offer .flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+/* icon color */
+#offer .flickity-button-icon {
+  fill: white;
+}
+/* position outside */
+#offer .flickity-prev-next-button.previous {
+  left: -40px;
+}
+#offer .flickity-prev-next-button.next {
+  right: -40px;
+}
 /*-------------------------------------------------------------- # offer Section End --------------------------------------------------------------*/
 
 /*-------------------------------------------------------------- # howto Section Start --------------------------------------------------------------*/
@@ -394,9 +408,7 @@ h6 {
 }
 
 #employee p {
-  font-size: 1em;
-  text-align: left;
-  line-height: 1.5em;
+  font-size: min(4.5vw, 30px);
   text-align: justify;
 }
 
@@ -420,7 +432,7 @@ h6 {
   text-align: left;
   padding: 1em 3em 1em 1em;
   color: var(--font-green-color);
-  font-size: 1em;
+  font-size: min(3vw, 20px);
   font-weight: 600;
   border: none;
   background: none;
@@ -478,7 +490,7 @@ h6 {
   background: rgba(58, 107, 60, 0.09);
 }
 .faq .faq-answer p {
-  font-size: 0.8em;
+  font-size: min(3vw, 20px);
   line-height: 1.5em;
   margin: 1em 1em 1em 1em;
   text-align: justify;
