@@ -1,0 +1,547 @@
+/*-------------------------------------------------------------- # Base Section Start--------------------------------------------------------------*/
+:root {
+	--main-bg-color: #D3C6B6;
+	--accent-bg-color: #F5F5F5;
+	--font-green-color: #3A6B3C;
+}
+
+html *
+{
+   font-family: 'Kulim Park', sans-serif !important;
+}
+
+body {
+    display: block;
+    margin: 0px;
+}
+
+.section {
+	padding: 10% 10%;
+	margin-bottom: 0;
+}
+
+/*-------------------------------------------------------------- # Base Section End--------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------- # General Section Start--------------------------------------------------------------*/
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* center the child elements horizontally */
+}
+
+h1, h2
+{    
+    text-align: center;
+	font-size: 2em;
+    line-height: 2.5em;
+	margin: 0.5em 0;
+    font-weight: 800;
+}
+
+h3, h4
+{   
+    text-align: center;
+    text-transform: capitalize;
+	font-size: 1em;
+    line-height: 1em;
+    font-weight: 600;
+}
+
+h5, h6, p
+{
+    text-transform: capitalize;
+	font-size: 0.8em;
+	line-height: 1.2em;
+	text-align: left;
+	font-weight: 400;
+}
+
+h1, h3, h5, p
+{
+  color: #0A0C1F;
+  font-style: normal;
+}
+
+h2, h4, h6
+{
+  color: var(--font-green-color);
+  font-style: normal;
+  font-weight: 600;
+}
+
+
+/*-------------------------------------------------------------- # General Section End--------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------- # main Section Start --------------------------------------------------------------*/
+
+#main
+{
+	height: 100vh;
+	min-height: 100vh;
+	background: var(--main-bg-color);
+	padding: 0%;
+}
+
+#main .air
+{
+    height: 10vh;
+}
+
+#main .container {
+	margin: 6vh 0;
+}
+
+#main .vl {
+  text-align: center;
+  border-left: 2px solid #0A0C1F;
+  height: 35vh;
+  display: flex;
+  justify-content: center; /* center the child elements horizontally */
+}
+
+#main h1, #main h3
+{
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#main h1
+{
+  font-size: 2.8em;
+  font-weight: 1000;
+  letter-spacing: 0.02em;
+}
+
+#main h3
+{
+  font-size: 2em;
+  letter-spacing: 0.3em;
+  margin-top: -1.5rem;
+  text-shadow: 0px 0.05em 0.05em rgba(0, 0, 0, 0.25);
+}
+
+#main h4
+{
+    text-transform: capitalize;
+	font-size: 1em;
+	line-height: 1em;
+	letter-spacing: 0.1em;
+	color: var(--font-green-color);
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+#main p
+{
+	font-size: 1em;
+}
+
+/*-------------------------------------------------------------- # main Section End --------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------- # form Section Start --------------------------------------------------------------*/
+
+#form
+{
+	background: var(--accent-bg-color);
+	text-align: center;
+	height: 65vh;
+}
+
+#form #form-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form #form-progress div {
+    width: 10px;
+    line-height: 10px;
+    text-align: center;
+}
+
+#form #form-progress .numberCircle {
+    border-radius: 50%;
+	padding: 15px;
+	font-size: 1.5em;
+    background: light grey;
+    border: 2px solid grey;
+	color: grey;
+}
+
+#form #form-progress .numberCircle.current {
+    background: #fff;
+    border: 2px solid var(--font-green-color);
+	color: var(--font-green-color);
+}
+
+#form #form-progress .numberCircle.progressed {
+    background: var(--font-green-color);
+    border: 2px solid white;
+	color: white;
+}
+
+#form #form-progress .progress-separator {
+	width: 4em;
+	border-bottom: 2px solid var(--font-green-color);
+    margin: 0 0.2em 0em 0.2em;
+	padding: 0;
+}
+
+#form #form-qs {
+	height: 45vh;
+    margin-top: 2.5em;
+}
+
+#form .form-a {
+	margin: 2em 0;
+}
+
+#form .form-a textarea {
+	border-radius: .4em;
+	padding: 1em;
+    width: 80%;
+    height: 12em;
+	
+	text-align: left;
+	font-size: 1em;
+	font-weight: 500;
+	line-height: 1.5em;
+	text-align: left;
+}
+
+#form #form-q5 .form-a label {
+  font-size: 0.8em;
+  display: inline-block;
+  width: 8em;
+  text-align: left
+}
+
+#form #form-q5 input[type=text],
+#form #form-q5 select {
+  padding: 0 0.5em;
+  border-radius: 0.4em;
+  width: 65%;
+  height: 2em;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Include padding and border in total width */
+}
+
+#form #form-q5 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1.2em;
+  cursor: pointer;
+  padding-right: 1.2em; /* Adjust padding to match input element */
+}
+
+#form #form-q5 p {
+	font-size: 0.8em;
+}
+
+#form label {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+#form button {
+	margin: .5em;
+	
+	width: 14em;
+	height: 2.4em;
+	
+	border-radius: .4em;
+	border-color: var(--font-green-color);
+	background-color: white;
+	font-size: 1.2em;
+	color: var(--font-green-color);
+}
+
+#form button.selected {
+	background-color: var(--font-green-color);
+	color: white;
+}
+
+#form #form-buttons button {
+	width: 5em;
+}
+
+#form #form-buttons button.completed {
+	background-color: var(--font-green-color);
+	color: white;
+}
+
+#form #form-post h3 {
+	font-size: 1.5em;
+	font-weight: 600;
+	text-align: left;
+}
+
+
+#form #form-post p 
+{
+}
+
+/*-------------------------------------------------------------- # form Section End --------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------- # slogan Section Start --------------------------------------------------------------*/
+
+#slogan
+{
+	background: var(--main-bg-color);
+}
+
+#slogan h2
+{
+	font-size: 2em;
+	line-height: 2.5em;
+	letter-spacing: 0.03em;
+}
+
+
+/*-------------------------------------------------------------- # slogan Section End --------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------- # clients Section Start --------------------------------------------------------------*/
+
+#clients
+{
+	background: var(--accent-bg-color);
+}
+
+
+#clients .gallery-cell {
+  width: 85%;
+  height: 65vh;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+#clients .gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 25vh;
+  font-size: 80px;
+  color: white;
+}
+
+/*-------------------------------------------------------------- # clients Section End --------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------- # offer Section Start --------------------------------------------------------------*/
+
+#offer
+{
+	background: var(--main-bg-color);
+}
+
+#offer .gallery {
+  background: #EEE;
+  border-radius: 4%;
+}
+
+#offer .flickity-viewport{
+  border-radius: 4%;
+}
+
+#offer .gallery-cell {
+  width: 100%;
+  height: 50vh;
+  margin-right: 10px;
+  background: #8C8;
+}
+
+#offer .gallery-cell-top
+{
+	width: 100%;
+	height: 55%;
+	background: red;
+}
+
+#offer .gallery-cell-bot
+{
+	width: 100%;
+	height: 45%;
+	background: #FCECBB;
+}
+
+#offer .gallery-cell-bot h5
+{
+	font-size: 1.5em;
+	line-height: 1em;
+    font-weight: 600;
+	padding: 2em 0em 0.75em 0em;
+	margin: 0;
+    text-align: center;
+}
+
+#offer .gallery-cell-bot p
+{
+	font-size: 0.8em;
+	font-weight: 600;
+	line-height: 1em;
+	padding: 0em 2em 0em 2em;
+	margin: 0;
+    text-align: center;
+}
+
+/* position dots in carousel */
+#offer .flickity-page-dots {
+  bottom: 37.5%;
+}
+
+#offer #everfit {
+ padding: 2em 0;	
+}
+
+/*-------------------------------------------------------------- # offer Section End --------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------- # howto Section Start --------------------------------------------------------------*/
+
+#howto
+{
+	background: var(--accent-bg-color);
+}
+
+/*-------------------------------------------------------------- # howto Section End --------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------- # employee Section Start --------------------------------------------------------------*/
+
+#employee
+{
+	background: var(--main-bg-color);
+}
+
+#employee p
+{
+	font-size: 1em;
+	text-align: left;
+	line-height: 1.5em;
+    text-align: justify;
+}
+
+
+/*-------------------------------------------------------------- # employee Section End --------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------- # faq Section Start --------------------------------------------------------------*/
+
+#faq
+{
+	background: var(--accent-bg-color);
+}
+
+ .faq .faq-item {
+	 border-bottom: 1px solid light grey;
+}
+ .faq .faq-item button[aria-expanded='true'] {
+	 border-bottom: 1px solid var(--font-green-color);
+}
+ .faq button {
+	 position: relative;
+	 display: inline-block;
+	 text-align: left;
+	 padding: 1em 3em 1em 1em;
+	 color: var(--font-green-color);
+	 font-size: 1em;
+	 font-weight: 600;
+	 border: none;
+	 background: none;
+	 outline: none;
+	 width: 100%;
+}
+
+ .faq button .faq-question {
+	 width: 88%
+	 display: inline-block;
+}
+ .faq button .icon {
+	 display: inline-block;
+	 position: absolute;
+	 top: 18px;
+	 width: 22px;
+	 height: 22px;
+	 border: 1px solid;
+	 border-radius: 22px;
+     right: 0%;
+}
+ .faq button .icon::before {
+	 display: block;
+	 position: absolute;
+	 content: '';
+	 top: 9px;
+	 left: 5px;
+	 width: 10px;
+	 height: 2px;
+	 background: currentColor;
+}
+ .faq button .icon::after {
+	 display: block;
+	 position: absolute;
+	 content: '';
+	 top: 5px;
+	 left: 9px;
+	 width: 2px;
+	 height: 10px;
+	 background: currentColor;
+}
+
+ .faq button[aria-expanded='true'] + .faq-answer {
+	 opacity: 1;
+	 max-height: 100vh;
+	 transition: all 200ms linear;
+	 will-change: opacity, max-height;
+}
+ .faq .faq-answer {
+	 opacity: 0;
+	 max-height: 0;
+	 overflow: hidden;
+	 transition: opacity 200ms linear, max-height 200ms linear;
+	 will-change: opacity, max-height;
+	 background: rgba(58, 107, 60, 0.09);
+}
+ .faq .faq-answer p {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	margin: 1em 1em 1em 1em;	
+    text-align: justify;
+}
+
+/*-------------------------------------------------------------- # faq Section End --------------------------------------------------------------*/
+
+ 
+/*-------------------------------------------------------------- # foot Section Start --------------------------------------------------------------*/
+
+#foot
+{
+	background: var(--main-bg-color);
+}
+
+/*-------------------------------------------------------------- # foot Section End --------------------------------------------------------------*/
