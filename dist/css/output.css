@@ -621,7 +621,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  /* center the child elements horizontally */
+  align-items: center;
 }
 
 h1,
@@ -923,6 +923,9 @@ h6 {
 #offer .gallery {
   background: #eee;
   border-radius: 4%;
+  width: min(100%, 500px);
+  align-self: center;
+  margin: auto;
 }
 
 #offer .flickity-viewport {
@@ -941,7 +944,7 @@ h6 {
 
 #offer .gallery-cell {
   width: 100%;
-  height: max(50vh, 50vw);
+  height: max(50vh, 35vw);
 }
 
 #offer .gallery-cell-top {
@@ -1022,12 +1025,46 @@ h6 {
   padding: 10vh 0;
 }
 
+@media (min-width: 769px) {
+  #howto {
+    padding: 5% 25%;
+  }
+}
+
 #howto .step {
-  height: 15vh;
+  height: min(15vh, 25vw);
   margin: min(7.5vh, 50px) 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0px, 1fr));
   grid-template-rows: repeat(1, minmax(0px, 1fr));
+}
+
+#howto .step .right {
+  justify-self: end;
+  justify-content: space-around;
+  text-align: right;
+}
+
+#howto .step .left {
+  justify-self: start;
+  justify-content: space-around;
+  text-align: left;
+}
+
+#howto .step .block.right {
+  margin-left: max(-7.5vh, -12.5vw);
+  padding-left: min(7.5vw, 5vh);
+  padding-right: 2.5vw;
+}
+
+#howto .step .block.left {
+  margin-right: max(-7.5vh, -12.5vw);
+  padding-right: min(7.5vw, 5vh);
+  padding-left: 2.5vw;
+}
+
+#howto .step .step-id {
+  grid-column: span 1 / span 1;
 }
 
 #howto .step .circle {
@@ -1036,10 +1073,8 @@ h6 {
   aspect-ratio: 1/1;
   border-radius: 50%;
   background: #f4d9d0;
-  justify-self: end;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 #howto .step .circle i {
@@ -1052,25 +1087,21 @@ h6 {
   display: flex;
   flex-flow: column;
   background: #f4d9d0;
-  margin-left: -7.5vh;
-  padding-left: 10vw;
-  padding-right: 2.5vw;
   justify-content: center;
   grid-column: span 2 / span 2;
 }
 
 #howto .step .block p,
 #howto .step .block h5 {
-  text-align: right;
 }
 
 #howto .step .block h5 {
-  font-size: min(5.5vw, 30px);
+  font-size: min(5vw, 33.3px);
   font-weight: 600;
 }
 
 #howto .step .block p {
-  font-size: min(3.5vw, 20px);
+  font-size: min(3vw, 20px);
   font-weight: 400;
 }
 
