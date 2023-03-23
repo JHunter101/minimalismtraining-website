@@ -8,10 +8,21 @@
     />
     <link rel="stylesheet" type="text/css" href="dist/css/output.css" />
     <link rel="stylesheet" href="dep/css/flickity.css" media="screen" />
+    <!-- css.gg -->
+    <link href="https://css.gg/css" rel="stylesheet" />
+
+    <!-- UNPKG -->
+    <link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />
+
+    <!-- JSDelivr -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/css.gg/icons/all.css"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="section-container flex h-screen main-bg">
+    <div class="flex h-screen main-bg">
       <section id="main" class="section m-auto">
         <h1 id="logo1">Minimalism</h1>
         <h3>Training</h3>
@@ -40,24 +51,24 @@
           </div>
           <div id="form-qs">
             <div id="form-q1">
-              <label for="q1">How can I help you?</label> <br />
+              <label for="q1">How can I help you?</label>
               <div class="form-a">
                 <button id="q1b1" type="button" class="qbutton" onclick="">
-                  Build muscle</button
-                ><br />
+                  Build muscle
+                </button>
                 <button id="q1b2" type="button" class="qbutton" onclick="">
-                  Weight loss</button
-                ><br />
+                  Weight loss
+                </button>
                 <button id="q1b3" type="button" class="qbutton" onclick="">
-                  Healthy lifestyle</button
-                ><br />
+                  Healthy lifestyle
+                </button>
               </div>
             </div>
             <div id="form-q2" class="hidden">
               <label for="q2"
                 >What is currently holding you back from reaching your
                 goals?</label
-              ><br />
+              >
               <div class="form-a">
                 <textarea
                   placeholder="Your Motivation..."
@@ -67,8 +78,7 @@
               </div>
             </div>
             <div id="form-q3" class="hidden">
-              <label for="q3">What is your motivation to start now?</label
-              ><br />
+              <label for="q3">What is your motivation to start now?</label>
               <div class="form-a">
                 <textarea
                   placeholder="Your Motivation..."
@@ -82,40 +92,35 @@
                 >Are you ready to commit financially \& time wise through online
                 coaching, work out plans and accountability to reach your goals
                 for a minimum of 3 months?</label
-              ><br />
+              >
               <div class="form-a">
                 <button id="q4b1" type="button" class="qbutton" onclick="">
-                  Yes!</button
-                ><br />
+                  Yes!
+                </button>
                 <button id="q4b2" type="button" class="qbutton" onclick="">
-                  Yes, but I am nervous</button
-                ><br />
+                  Yes, but I am nervous
+                </button>
               </div>
             </div>
             <div id="form-q5" class="hidden">
-              <label for="q5">Last step! Fill in the form:</label><br />
+              <label for="q5">Last step! Fill in the form:</label>
               <div class="form-a">
                 <label for="q51">Your full name</label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  id="q51"
-                  name="q51"
-                /><br />
+                <input type="text" placeholder="Name" id="q51" name="q51" />
                 <label for="q52">Your email</label>
                 <input
                   type="text"
                   placeholder="example@gmail.com"
                   id="q52"
                   name="q52"
-                /><br />
+                />
                 <label for="q53">Phone number</label>
                 <input
                   type="text"
                   placeholder="+31 6 12345678"
                   id="q53"
                   name="q53"
-                /><br />
+                />
                 <label for="q54">Country</label>
                 <select id="q54" name="country">
                   <option value="" disabled selected>
@@ -125,9 +130,8 @@
                   <option value="AX">Aland Islands</option>
                   <option value="AL">Albania</option>
                 </select>
-                <br />
               </div>
-              <div>
+              <div id="form-agreement">
                 <p>
                   When you submit the form, we process the personal data you
                   provide. You can read more about Akbar Abawi’s processing of
@@ -154,13 +158,17 @@
               Next
             </button>
           </div>
-          <div id="form-post" class="hidden">
-            <h3>The first step is in the bag! High-fives all around!</h3>
-            <p>
-              Well done, the first step has been taken. I will contact you
-              within 48 hours. I'm looking forward to it! Looking forward to
-              having you a part of my team very soon!
-            </p>
+
+          <div id="form-post-container" class="flex hidden">
+            <div id="form-post">
+              <i class="gg-check-o"></i>
+              <h3>The first step is in the bag! High-fives all around!</h3>
+              <p>
+                Well done, the first step has been taken. I will contact you
+                within 48 hours. I'm looking forward to it! Looking forward to
+                having you a part of my team very soon!
+              </p>
+            </div>
           </div>
         </form>
       </section>
@@ -169,8 +177,8 @@
     <div class="section-container flex main-bg">
       <section id="slogan" class="section">
         <h5>Click and find out more</h5>
-        <h2>Busy Being Boring</h2>
-        <p>
+        <h2 onclick='toggle_hide("post-slogan")'>Busy Being Boring</h2>
+        <p id="post-slogan" class="hidden">
           "We all feel pressure through social media or others we challenge you
           to be a better version of yourself."
         </p>
@@ -180,35 +188,48 @@
       <section id="clients" class="section">
         <h1>Client Transformations</h1>
         <div class="gallery js-flickity">
-          <div class="gallery-cell"></div>
-          <div class="gallery-cell"></div>
-          <div class="gallery-cell"></div>
-          <div class="gallery-cell"></div>
-          <div class="gallery-cell"></div>
+          <div class="gallery-cell">
+            <img src="res/images/clients/client_1.png" alt="Client A" />
+          </div>
+          <div class="gallery-cell">
+            <img src="res/images/clients/client_2.png" alt="Client B" />
+          </div>
+          <div class="gallery-cell">
+            <img src="res/images/clients/client_3.png" alt="Client C" />
+          </div>
         </div>
       </section>
     </div>
 
-    <div class="section-container flex main-bg">
+    <div class="section-container main-bg">
       <section id="offer" class="section">
         <h1>What do you get</h1>
         <div class="gallery js-flickity">
           <div class="gallery-cell">
-            <div class="gallery-cell-top"></div>
+            <div class="gallery-cell-top">
+              <img src="res/images/offers/offer_1.png" alt="Training" />
+            </div>
             <div class="gallery-cell-bot">
               <h5>Training</h5>
               <p>A customized plan for you to suit you anytime and anywhere.</p>
             </div>
           </div>
           <div class="gallery-cell">
-            <div class="gallery-cell-top"></div>
+            <div class="gallery-cell-top">
+              <img src="res/images/offers/offer_2.png" alt="Nutrition" />
+            </div>
             <div class="gallery-cell-bot">
               <h5>Nutrition</h5>
               <p>Your custom meal plan is made for a healthy lifestyle.</p>
             </div>
           </div>
           <div class="gallery-cell">
-            <div class="gallery-cell-top"></div>
+            <div class="gallery-cell-top">
+              <img
+                src="res/images/offers/offer_3.png"
+                alt="Progress tracking"
+              />
+            </div>
             <div class="gallery-cell-bot">
               <h5>Progress tracking</h5>
               <p>
@@ -218,7 +239,12 @@
             </div>
           </div>
           <div class="gallery-cell">
-            <div class="gallery-cell-top"></div>
+            <div class="gallery-cell-top">
+              <img
+                src="res/images/offers/offer_4.png"
+                alt="Continuous communication"
+              />
+            </div>
             <div class="gallery-cell-bot">
               <h5>Continuous communication</h5>
               <p>
@@ -258,7 +284,7 @@
       </section>
     </div>
 
-    <div class="section-container flex main-bg">
+    <div id="employee-container" class="section-container flex main-bg">
       <section id="employee" class="section">
         <h1>Meet Ak!</h1>
         <p>
@@ -276,8 +302,9 @@
           guide you, motivate you, and hold you accountable for the goals you
           are more than capable of achieving.
         </p>
-
-        <h1>IMAGE</h1>
+        <div class="image-stack">
+          <img src="res/images/employees/ak.png" alt="Akbar Abawi" />
+        </div>
       </section>
     </div>
 
@@ -452,15 +479,23 @@
 
     <div class="section-container flex main-bg">
       <section id="foot" class="section">
-        <h1>Minimalism</h1>
-        <h2>Training</h2>
-        <h3>Terms and conditions</h3>
-        <h3>Privacy Policy</h3>
-        <p>Insta Icon</p>
-        <p>Tiktok Icon</p>
-        <p>Made with passion 🔥 in the Netherlands</p>
-        <p>© Minimalismtraining 2023.</p>
-        <p>All rights reserved.</p>
+        <div id="terms" class="container">
+          <h1 id="logo-foot">Minimalism</h1>
+          <h3>Training</h3>
+        </div>
+        <div id="terms" class="container">
+          <h6>Terms and conditions</h6>
+          <h6>Privacy Policy</h6>
+        </div>
+        <div class="container">
+          <i class="gg-instagram"></i>
+          <i class="gg-instagram"></i>
+        </div>
+        <div id="terms" class="container">
+          <p>Made with passion 🔥 in the Netherlands</p>
+          <p>© Minimalismtraining 2023.</p>
+          <p>All rights reserved.</p>
+        </div>
       </section>
     </div>
   </body>
@@ -470,5 +505,6 @@
   <script src="dist/faq.js"></script>
   <script>
     new CircleType(document.getElementById('logo1')).radius(300);
+    new CircleType(document.getElementById('logo-foot')).radius(300);
   </script>
 </html>

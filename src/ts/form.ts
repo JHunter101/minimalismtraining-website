@@ -148,7 +148,7 @@ function go_next() {
       hide_elem('form-progress');
       hide_elem('form-qs');
       hide_elem('form-buttons');
-      unhide_elem('form-post');
+      unhide_elem('form-post-container');
     }
 
     if (current_form_page < 5) {
@@ -182,5 +182,12 @@ function hide_elem(elem: string) {
   const element = document.getElementById(elem);
   if (element) {
     element.classList.add('hidden');
+  }
+}
+
+function toggle_hide(elem: string) {
+  const element = document.getElementById(elem);
+  if (element) {
+    element.classList.toggle('hidden');
   }
 }

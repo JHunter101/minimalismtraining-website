@@ -596,6 +596,12 @@ body {
   padding: 10% 10%;
 }
 
+@media (min-width: 769px) {
+  .section-container {
+    padding: 5% 25%;
+  }
+}
+
 .section {
   margin: auto;
 }
@@ -665,7 +671,7 @@ h6 {
 #main #vl-container .vl {
   text-align: center;
   border-left: min(0.3vh, 2px) solid #0a0c1f;
-  height: min(45vh, 300px);
+  height: min(45vh, 200px);
   display: flex;
   justify-content: center;
   /* center the child elements horizontally */
@@ -684,7 +690,7 @@ h6 {
 }
 
 #main h3 {
-  letter-spacing: min(0.9vw, 6px);
+  letter-spacing: min(3vw, 20px);
   text-shadow: 0px min(0.15vh, 1px) min(0.15vh, 1px) rgba(0, 0, 0, 0.25);
 }
 
@@ -744,10 +750,12 @@ h6 {
 /* QA */
 
 #form #form-qs {
-  height: 40vh;
+  height: 45vh;
 }
 
 #form label {
+  display: block;
+  min-height: 10vh;
   font-size: min(4.5vw, 30px);
 }
 
@@ -759,18 +767,25 @@ h6 {
   border-radius: min(0.9vh, 60px);
   padding: min(3vh, 20px);
   width: 100%;
-  height: min(36vh, 240px);
+  height: 30vh;
+  font-size: min(4.5vw, 30px);
+}
+
+#form #form-q5 label {
+  min-height: 0;
 }
 
 #form #form-q5 .form-a label {
-  font-size: min(3vw, 20px);
+  font-size: min(4vw, 20px);
   display: inline-block;
   width: 34%;
+  height: 0;
   text-align: left;
 }
 
 #form #form-q5 input[type='text'],
 #form #form-q5 select {
+  font-size: min(4vw, 20px);
   margin: min(1.5vh, 10px) 0;
   padding: 0 min(1.5vh, 10px);
   border-radius: min(1.5vh, 10px);
@@ -792,7 +807,11 @@ h6 {
 }
 
 #form #form-q5 p {
-  font-size: min(2vw, 13.3px);
+  font-size: min(3vw, 20px);
+}
+
+#form #form-q5 #form-agreement {
+  margin: min(1.5vh, 10px) 0;
 }
 
 /* Buttons */
@@ -802,8 +821,9 @@ h6 {
   margin: min(1.5vh, 10px);
   width: min(95%, 500px);
   height: min(7.5vh, 50px);
-  font-size: min(4.5vw, 30px);
+  font-size: min(4.5vw, 25px);
   color: var(--font-green-color);
+  font-weight: 600;
   border-radius: min(1.5vh, 10px);
   border: min(0.3vh, 2px) solid var(--font-green-color);
 }
@@ -824,15 +844,31 @@ h6 {
 
 /* Post */
 
+#form #form-post-container {
+  min-height: 65vh;
+}
+
+#form #form-post {
+  margin: auto;
+}
+
 #form #form-post h3 {
   font-size: min(6vw, 40px);
-  line-height: min(4.5vh, 30px);
+  line-height: min(6vw, 40px);
   margin-bottom: min(3vh, 20px);
   text-align: left;
 }
 
-#form #form-post p {
-  line-height: min(3vh, 20px);
+.gg-check-o {
+  --ggs: 3;
+  color: black;
+  background-color: black;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.gg-check-o::after {
+  color: var(--accent-bg-color);
 }
 
 /*-------------------------------------------------------------- # form Section End --------------------------------------------------------------*/
@@ -841,6 +877,10 @@ h6 {
 
 #slogan {
   background: var(--main-bg-color);
+}
+
+#slogan h5 {
+  text-align: right;
 }
 
 #slogan h2 {
@@ -859,21 +899,13 @@ h6 {
 
 #clients .gallery-cell {
   width: 85%;
-  height: 65vh;
-  margin-right: min(2vh, 10px);
-  background: #8c8;
+  margin-right: min(6vh, 20px);
   counter-increment: gallery-cell;
 }
 
-/* cell number */
-
-#clients .gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 25vh;
-  font-size: 80px;
-  color: white;
+#clients img {
+  width: 100%;
+  /* set the width of the image to 100% of the container */
 }
 
 /*-------------------------------------------------------------- # clients Section End --------------------------------------------------------------*/
@@ -893,16 +925,24 @@ h6 {
   border-radius: 4%;
 }
 
+#offer img {
+  width: 100%;
+  /* set the width of the image to 100% of the container */
+  height: 100%;
+  /* set the height of the image to 100% of the container */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* stretch the image to fill the container */
+}
+
 #offer .gallery-cell {
   width: 100%;
-  height: 50vh;
-  background: #8c8;
+  height: max(50vh, 50vw);
 }
 
 #offer .gallery-cell-top {
   width: 100%;
   height: 55%;
-  background: red;
 }
 
 #offer .gallery-cell-bot {
@@ -912,19 +952,9 @@ h6 {
 }
 
 #offer .gallery-cell-bot h5 {
-  font-size: 1.5em;
-  line-height: 1em;
+  font-size: min(6vw, 40px);
   font-weight: 600;
-  padding: 2em 0em 0.75em 0em;
-  margin: 0;
-  text-align: center;
-}
-
-#offer .gallery-cell-bot p {
-  font-size: 0.8em;
-  font-weight: 600;
-  line-height: 1em;
-  padding: 0em 2em 0em 2em;
+  padding: min(12vw, 80px) 0 min(1.5vw, 10px) 0em;
   margin: 0;
   text-align: center;
 }
@@ -933,6 +963,14 @@ h6 {
 
 #offer .flickity-page-dots {
   bottom: 37.5%;
+}
+
+#offer .gallery-cell-bot p {
+  font-size: min(4.5vw, 30px);
+  font-weight: 400;
+  padding: 0 10%;
+  margin: 0;
+  text-align: center;
 }
 
 #offer #everfit {
@@ -983,13 +1021,14 @@ h6 {
 
 /*-------------------------------------------------------------- # employee Section Start --------------------------------------------------------------*/
 
-#employee {
-  background: var(--main-bg-color);
+#employee-container {
+  padding-bottom: 0;
 }
 
-#employee p {
-  font-size: min(4.5vw, 30px);
-  text-align: justify;
+#employee img {
+  margin: auto;
+  padding-top: min(3vh, 20px);
+  max-width: 65%;
 }
 
 /*-------------------------------------------------------------- # employee Section End --------------------------------------------------------------*/
@@ -1089,6 +1128,39 @@ h6 {
 
 #foot {
   background: var(--main-bg-color);
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+
+#foot h1,
+#foot h3 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#foot h1 {
+  font-size: min(12vw, 80px);
+  font-weight: 1000;
+  letter-spacing: min(0.12vw, 0.8px);
+}
+
+#foot h3 {
+  letter-spacing: min(3vw, 20px);
+  text-shadow: 0px min(0.15vh, 1px) min(0.15vh, 1px) rgba(0, 0, 0, 0.25);
+}
+
+#foot .container {
+  margin: min(3vh, 20px) 0;
+}
+
+#foot #terms {
+  flex-flow: column;
+  margin: min(6vh, 40px) 0;
+}
+
+#foot .container i {
+  --ggs: 1;
+  margin: 15px;
 }
 
 /*-------------------------------------------------------------- # foot Section End --------------------------------------------------------------*/
