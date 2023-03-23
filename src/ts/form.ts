@@ -37,7 +37,6 @@ window.onload = function () {
   // Add click event listener to each button
   textboxes.forEach((textbox) => {
     textbox.addEventListener('input', function (this: HTMLTextAreaElement) {
-      console.log(1);
       if (this.value.trim() !== '') {
         // check if the input value is non-empty after trimming whitespace
         complete_section();
@@ -85,6 +84,7 @@ function complete_section() {
       element.classList.add('completed');
     }
   }
+  sessionStorage.setItem('completedPages', JSON.stringify(completedPages));
 }
 
 function update_progress() {

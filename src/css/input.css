@@ -11,16 +11,31 @@
 
 html * {
   font-family: 'Kulim Park', sans-serif !important;
+  color: black;
 }
 
 body {
-  display: block;
   margin: 0px;
 }
 
-.section {
+.main-bg {
+  background: var(--main-bg-color);
+}
+
+.alt-bg {
+  background: var(--accent-bg-color);
+}
+
+.section-container {
   padding: 10% 10%;
-  margin-bottom: 0;
+}
+
+.section {
+  margin: auto;
+}
+
+.h-80-screen {
+  height: 80vh;
 }
 
 /*-------------------------------------------------------------- # Base Section End--------------------------------------------------------------*/
@@ -39,9 +54,8 @@ body {
 h1,
 h2 {
   text-align: center;
-  font-size: 2em;
-  line-height: 2.5em;
-  margin: 0.5em 0;
+  font-size: min(6vh, 40px);
+  margin: min(1.5vh, 10px) 0;
   font-weight: 800;
 }
 
@@ -49,8 +63,8 @@ h3,
 h4 {
   text-align: center;
   text-transform: capitalize;
-  font-size: 1em;
-  line-height: 1em;
+  font-size: min(3vh, 20px);
+  line-height: min(3vh, 20px);
   font-weight: 600;
 }
 
@@ -58,8 +72,8 @@ h5,
 h6,
 p {
   text-transform: capitalize;
-  font-size: 0.8em;
-  line-height: 1.2em;
+  font-size: min(2vh, 13.3px);
+  line-height: min(2vh, 13.3px);
   text-align: left;
   font-weight: 400;
 }
@@ -84,25 +98,14 @@ h6 {
 
 /*-------------------------------------------------------------- # main Section Start --------------------------------------------------------------*/
 
-#main {
-  height: 100vh;
-  min-height: 100vh;
-  background: var(--main-bg-color);
-  padding: 0%;
+#main #vl-container {
+  margin: min(6vh, 40px) 0;
 }
 
-#main .air {
-  height: 10vh;
-}
-
-#main .container {
-  margin: 6vh 0;
-}
-
-#main .vl {
+#main #vl-container .vl {
   text-align: center;
-  border-left: 2px solid #0a0c1f;
-  height: 35vh;
+  border-left: min(0.3vh, 2px) solid #0a0c1f;
+  height: min(45vh, 300px);
   display: flex;
   justify-content: center; /* center the child elements horizontally */
 }
@@ -114,60 +117,60 @@ h6 {
 }
 
 #main h1 {
-  font-size: 2.8em;
+  font-size: min(7.5vh, 50px);
   font-weight: 1000;
-  letter-spacing: 0.02em;
+  letter-spacing: min(0.06vh, 0.4px);
+  line-height: min(9vh, 60px);
 }
 
 #main h3 {
-  font-size: 2em;
-  letter-spacing: 0.3em;
-  margin-top: -1.5rem;
-  text-shadow: 0px 0.05em 0.05em rgba(0, 0, 0, 0.25);
+  font-size: min(6vh, 40px);
+  letter-spacing: min(0.9vh, 6px);
+  text-shadow: 0px min(0.15vh, 1px) min(0.15vh, 1px) rgba(0, 0, 0, 0.25);
 }
 
 #main h4 {
-  text-transform: capitalize;
-  font-size: 1em;
-  line-height: 1em;
-  letter-spacing: 0.1em;
-  color: var(--font-green-color);
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  letter-spacing: min(0.3vh, 2px);
+  text-shadow: 0px 0px min(0.3vh, 2px) rgba(0, 0, 0, 0.25);
 }
 
 #main p {
-  font-size: 1em;
+  font-size: min(3vh, 20px);
+  line-height: min(3vh, 20px);
 }
+
+/* Arrow */
 
 /*-------------------------------------------------------------- # main Section End --------------------------------------------------------------*/
 
 /*-------------------------------------------------------------- # form Section Start --------------------------------------------------------------*/
 
+/* Base */
 #form {
   background: var(--accent-bg-color);
   text-align: center;
-  height: 65vh;
 }
 
+/* Progress */
 #form #form-progress {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#form #form-progress div {
-  width: 10px;
-  line-height: 10px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0px, 1fr));
+  grid-template-rows: repeat(1, minmax(0px, 1fr));
+  gap: min(1.5vw, 10px);
+  place-items: center stretch;
+  margin: auto;
+  padding: min(9vw, 60px) 0;
+  width: min(80vw, 500px);
 }
 
 #form #form-progress .numberCircle {
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 1.5em;
-  background: light grey;
-  border: 2px solid grey;
   color: grey;
+
+  border-radius: 50%;
+  border: 2px solid grey;
+  aspect-ratio: 1/1;
+
+  font-size: min(3vh, 20px);
 }
 
 #form #form-progress .numberCircle.current {
@@ -183,54 +186,39 @@ h6 {
 }
 
 #form #form-progress .progress-separator {
-  width: 4em;
-  border-bottom: 2px solid var(--font-green-color);
-  margin: 0 0.2em 0em 0.2em;
-  padding: 0;
+  border-bottom: 2px solid grey;
 }
 
-#form #form-qs {
-  height: 45vh;
-  margin-top: 2.5em;
+/* QA */
+#form label {
+  font-size: min(3vh, 20px);
 }
 
 #form .form-a {
-  margin: 2em 0;
+  margin: min(6vh, 20px) 0;
 }
 
 #form .form-a textarea {
-  border-radius: 0.4em;
-  padding: 1em;
+  border-radius: min(0.9vh, 60px);
+  padding: min(3vh, 20px);
   width: 80%;
-  height: 12em;
-
-  text-align: left;
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1.5em;
-  text-align: left;
+  height: min(36vh, 240px);
 }
 
 #form #form-q5 .form-a label {
-  font-size: 0.8em;
+  font-size: min(2vh, 13.3px);
   display: inline-block;
-  width: 8em;
+  width: 34%;
   text-align: left;
 }
 
 #form #form-q5 input[type='text'],
 #form #form-q5 select {
-  padding: 0 0.5em;
-  border-radius: 0.4em;
-  width: 65%;
-  height: 2em;
-  display: inline-block;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-sizing: border-box; /* Include padding and border in total width */
+  margin: min(1.5vh, 10px) 0;
+  padding: 0 min(1.5vh, 10px);
+  border-radius: min(1.5vh, 10px);
+  width: 64%;
+  height: min(6vh, 40px);
 }
 
 #form #form-q5 select {
@@ -240,32 +228,27 @@ h6 {
   background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>');
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 1.2em;
+  background-size: min(3vh, 20px);
   cursor: pointer;
-  padding-right: 1.2em; /* Adjust padding to match input element */
+  padding-right: min(3vh, 20px); /* Adjust padding to match input element */
 }
 
 #form #form-q5 p {
-  font-size: 0.8em;
+  font-size: min(1.5vh, 10px);
 }
 
-#form label {
-  font-size: 1.2em;
-  line-height: 1.5em;
-  margin-bottom: 0.5em;
-}
-
+/* Buttons */
 #form button {
-  margin: 0.5em;
-
-  width: 14em;
-  height: 2.4em;
-
-  border-radius: 0.4em;
-  border-color: var(--font-green-color);
   background-color: white;
-  font-size: 1.2em;
+  margin: min(1.5vh, 10px);
+  width: min(95%, 500px);
+  height: min(7.5vh, 50px);
+
+  font-size: min(3vh, 20px);
   color: var(--font-green-color);
+
+  border-radius: min(1.5vh, 10px);
+  border: min(0.3vh, 2px) solid var(--font-green-color);
 }
 
 #form button.selected {
@@ -274,7 +257,7 @@ h6 {
 }
 
 #form #form-buttons button {
-  width: 5em;
+  width: min(15vh, 100px); /* TODO */
 }
 
 #form #form-buttons button.completed {
@@ -282,6 +265,7 @@ h6 {
   color: white;
 }
 
+/* Post */
 #form #form-post h3 {
   font-size: 1.5em;
   font-weight: 600;
@@ -316,7 +300,7 @@ h6 {
 #clients .gallery-cell {
   width: 85%;
   height: 65vh;
-  margin-right: 10px;
+  margin-right: min(2vh, 10px);
   background: #8c8;
   counter-increment: gallery-cell;
 }
@@ -351,7 +335,6 @@ h6 {
 #offer .gallery-cell {
   width: 100%;
   height: 50vh;
-  margin-right: 10px;
   background: #8c8;
 }
 
