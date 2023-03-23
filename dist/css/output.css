@@ -551,6 +551,10 @@ video {
   margin: auto;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -750,7 +754,7 @@ h6 {
 /* QA */
 
 #form #form-qs {
-  height: 45vh;
+  min-height: 45vh;
 }
 
 #form label {
@@ -778,7 +782,7 @@ h6 {
 #form #form-q5 .form-a label {
   font-size: min(4vw, 20px);
   display: inline-block;
-  width: 34%;
+  width: 33%;
   height: 0;
   text-align: left;
 }
@@ -789,7 +793,7 @@ h6 {
   margin: min(1.5vh, 10px) 0;
   padding: 0 min(1.5vh, 10px);
   border-radius: min(1.5vh, 10px);
-  width: 64%;
+  width: 63%;
   height: min(6vh, 40px);
 }
 
@@ -1015,6 +1019,59 @@ h6 {
 
 #howto {
   background: var(--accent-bg-color);
+  padding: 10vh 0;
+}
+
+#howto .step {
+  height: 15vh;
+  margin: min(7.5vh, 50px) 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+  grid-template-rows: repeat(1, minmax(0px, 1fr));
+}
+
+#howto .step .circle {
+  grid-column: span 1 / span 1;
+  height: inherit;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: #f4d9d0;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#howto .step .circle i {
+  --ggs: 3;
+  align-self: center;
+  color: #c48468;
+}
+
+#howto .step .block {
+  display: flex;
+  flex-flow: column;
+  background: #f4d9d0;
+  margin-left: -7.5vh;
+  padding-left: 10vw;
+  padding-right: 2.5vw;
+  justify-content: center;
+  grid-column: span 2 / span 2;
+}
+
+#howto .step .block p,
+#howto .step .block h5 {
+  text-align: right;
+}
+
+#howto .step .block h5 {
+  font-size: min(5.5vw, 30px);
+  font-weight: 600;
+}
+
+#howto .step .block p {
+  font-size: min(3.5vw, 20px);
+  font-weight: 400;
 }
 
 /*-------------------------------------------------------------- # howto Section End --------------------------------------------------------------*/
@@ -1128,8 +1185,7 @@ h6 {
 
 #foot {
   background: var(--main-bg-color);
-  -moz-text-align-last: center;
-       text-align-last: center;
+  align-items: center;
 }
 
 #foot h1,
