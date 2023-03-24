@@ -600,7 +600,7 @@ body {
   padding: 10% 10%;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .section-container {
     padding: 5% 25%;
   }
@@ -884,13 +884,17 @@ h6 {
 }
 
 #slogan h5 {
-  text-align: right;
+  text-align: center;
 }
 
 #slogan h2 {
   font-size: min(9vw, 60px);
   line-height: 2.5em;
   letter-spacing: 0.03em;
+}
+
+#slogan p {
+  text-align: center;
 }
 
 /*-------------------------------------------------------------- # slogan Section End --------------------------------------------------------------*/
@@ -973,10 +977,9 @@ h6 {
 
 #offer .gallery-cell-bot p {
   font-weight: 400;
-  padding: 0 10%;
+  padding: 0 10% min(3vh 20px) 10%;
   margin: 0;
   text-align: center;
-  padding-bottom: min(3vh 20px);
 }
 
 #offer #everfit {
@@ -1024,15 +1027,15 @@ h6 {
   padding: 10vh 0;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   #howto {
     padding: 5% 25%;
   }
 }
 
 #howto .step {
-  height: min(15vh, 25vw);
   margin: min(7.5vh, 50px) 0;
+  height: min(15vh, 25vw);
   display: grid;
   grid-template-columns: repeat(4, minmax(0px, 1fr));
   grid-template-rows: repeat(1, minmax(0px, 1fr));
@@ -1052,7 +1055,7 @@ h6 {
 
 #howto .step .block.right {
   margin-left: max(-7.5vh, -12.5vw);
-  padding-left: min(10vw, 7.5vh);
+  padding-left: min(15vw, 6vh);
   padding-right: 2.5vw;
 }
 
