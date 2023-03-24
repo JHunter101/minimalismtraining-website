@@ -30,7 +30,7 @@ body {
   padding: 10% 10%;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
   .section-container {
     padding: 5% 25%;
   }
@@ -249,7 +249,7 @@ h6 {
 #form button {
   background-color: white;
   margin: min(1.5vh, 10px);
-  width: min(95%, 500px);
+  width: min(95%, 35vh);
   height: min(7.5vh, 50px);
 
   font-size: min(4.5vw, 25px);
@@ -351,7 +351,6 @@ h6 {
   background: #eee;
   border-radius: 4%;
   width: min(100%, 500px);
-  align-self: center;
   margin: auto;
 }
 
@@ -367,7 +366,7 @@ h6 {
 
 #offer .gallery-cell {
   width: 100%;
-  height: max(50vh, 35vw);
+  height: max(50vh, 45vw);
 }
 
 #offer .gallery-cell-top {
@@ -384,7 +383,7 @@ h6 {
 #offer .gallery-cell-bot h5 {
   font-size: min(6vw, 40px);
   font-weight: 600;
-  padding: min(12vw, 80px) 0 min(1.5vw, 10px) 0em;
+  padding: min(9vw, 60px) 0 min(1.5vw, 10px) 0em;
   margin: 0;
   text-align: center;
 }
@@ -395,7 +394,6 @@ h6 {
 }
 
 #offer .gallery-cell-bot p {
-  font-size: min(4.5vw, 30px);
   font-weight: 400;
   padding: 0 10%;
   margin: 0;
@@ -439,7 +437,7 @@ h6 {
   padding: 10vh 0;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
   #howto {
     padding: 5% 25%;
   }
@@ -468,18 +466,20 @@ h6 {
 
 #howto .step .block.right {
   margin-left: max(-7.5vh, -12.5vw);
-  padding-left: min(7.5vw, 5vh);
+  padding-left: min(10vw, 7.5vh);
   padding-right: 2.5vw;
 }
 
 #howto .step .block.left {
   margin-right: max(-7.5vh, -12.5vw);
-  padding-right: min(7.5vw, 5vh);
+  padding-right: min(12vw, 8vh);
   padding-left: 2.5vw;
 }
 
 #howto .step .step-id {
   grid-column: span 1 / span 1;
+  align-self: center;
+  justify-self: center;
 }
 
 #howto .step .circle {
