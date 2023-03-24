@@ -929,6 +929,7 @@ h6 {
 
 #offer .flickity-viewport {
   border-radius: 4%;
+  background: #fcecbb;
 }
 
 #offer img {
@@ -943,7 +944,6 @@ h6 {
 
 #offer .gallery-cell {
   width: 100%;
-  height: max(50vh, 45vw);
 }
 
 #offer .gallery-cell-top {
@@ -968,7 +968,7 @@ h6 {
 /* position dots in carousel */
 
 #offer .flickity-page-dots {
-  bottom: 37.5%;
+  bottom: 32.5%;
 }
 
 #offer .gallery-cell-bot p {
@@ -976,6 +976,7 @@ h6 {
   padding: 0 10%;
   margin: 0;
   text-align: center;
+  padding-bottom: min(3vh 20px);
 }
 
 #offer #everfit {
