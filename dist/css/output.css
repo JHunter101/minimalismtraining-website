@@ -571,12 +571,31 @@ video {
   height: 100vh;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.ring {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
 /*-------------------------------------------------------------- # Base Section Start--------------------------------------------------------------*/
 
 :root {
-  --main-bg-color: #d3c6b6;
+  --main-bg-color: #e5e0da;
   --accent-bg-color: #f5f5f5;
   --font-green-color: #3a6b3c;
+  --font-green-faded-color: #7c967d;
 }
 
 html * {
@@ -604,10 +623,18 @@ body {
   .section-container {
     padding: 5% 25%;
   }
+
+  .section-container-desk-wide {
+    padding: 5% 10% !important;
+  }
 }
 
 .section {
   margin: auto;
+}
+
+.air {
+  height: 15vh;
 }
 
 /*-------------------------------------------------------------- # Base Section End--------------------------------------------------------------*/
@@ -618,6 +645,18 @@ body {
   display: none !important;
 }
 
+@media (min-width: 1200px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -626,6 +665,7 @@ body {
 
 h1,
 h2 {
+  text-transform: capitalize;
   text-align: center;
   font-size: min(7.5vw, 50px);
   margin: min(2vh, 13.3px) 0;
@@ -643,7 +683,7 @@ h4 {
 h5,
 h6,
 p {
-  font-size: min(4vw, 26.7px);
+  font-size: min(3vw, 20px);
   text-align: left;
   font-weight: 400;
 }
@@ -668,8 +708,17 @@ h6 {
 
 /*-------------------------------------------------------------- # main Section Start --------------------------------------------------------------*/
 
+#main #logo img {
+  width: min(90vw, 600px);
+}
+
+#main #scroll-down img {
+  width: min(45vw, 300px);
+  margin: min(4.5vh, 30px) 0 min(4.5vh, 30px) min(4.5vw, 30px);
+}
+
 #main #vl-container {
-  margin: min(6vh, 40px) 0;
+  margin: min(9vh, 60px) 0;
 }
 
 #main #vl-container .vl {
@@ -810,10 +859,6 @@ h6 {
   /* Adjust padding to match input element */
 }
 
-#form #form-q5 p {
-  font-size: min(3vw, 20px);
-}
-
 #form #form-q5 #form-agreement {
   margin: min(1.5vh, 10px) 0;
 }
@@ -875,6 +920,27 @@ h6 {
   color: var(--accent-bg-color);
 }
 
+#form .employee-signature {
+  margin-left: auto;
+  width: min(15vw, 100px);
+  margin-top: min(1.5vh, 10px);
+}
+
+/* @media (min-width: 1200px) {
+  #form {
+    width: max(75vw, 900px);
+  }
+
+  #form .form-a {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #form .qbutton {
+    margin-right: 10px;
+  }
+} */
+
 /*-------------------------------------------------------------- # form Section End --------------------------------------------------------------*/
 
 /*-------------------------------------------------------------- # slogan Section Start --------------------------------------------------------------*/
@@ -883,18 +949,36 @@ h6 {
   background: var(--main-bg-color);
 }
 
-#slogan h5 {
-  text-align: center;
+#slogan h2,
+#slogan h2 span {
+  color: var(--font-green-faded-color);
+  font-size: min(5vw, 75px);
+  letter-spacing: min(0.5vw, 7.5px);
 }
 
 #slogan h2 {
-  font-size: min(9vw, 60px);
-  line-height: 2.5em;
-  letter-spacing: 0.03em;
+  margin: min(2vw, 30px);
 }
 
-#slogan p {
-  text-align: center;
+#slogan h2:hover,
+#slogan h2 span:hover,
+#slogan .selected {
+  color: var(--font-green-color);
+}
+
+#slogan h2:hover span,
+#slogan h2 span {
+  text-decoration: underline;
+}
+
+#slogan .slogan-text {
+  flex-basis: 70vw;
+}
+
+@media screen and (min-width: 1200px) {
+  #slogan .slogan-text {
+    flex-basis: 40vw;
+  }
 }
 
 /*-------------------------------------------------------------- # slogan Section End --------------------------------------------------------------*/
@@ -909,6 +993,21 @@ h6 {
   width: 80%;
   margin-right: min(6vh, 20px);
   counter-increment: gallery-cell;
+}
+
+@media (min-width: 1200px) {
+  #clients .gallery-cell img {
+    margin: auto;
+    width: 85%;
+  }
+
+  #clients .lift {
+    margin: 0 0 5vh 0;
+  }
+
+  #clients .drop {
+    margin: 5vh 0 0 0;
+  }
 }
 
 #clients img {
@@ -942,7 +1041,7 @@ h6 {
   height: 100%;
   /* set the height of the image to 100% of the container */
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   /* stretch the image to fill the container */
 }
 
@@ -961,10 +1060,10 @@ h6 {
   background: #fcecbb;
 }
 
-#offer .gallery-cell-bot h5 {
+#offer h5 {
   font-size: min(6vw, 40px);
   font-weight: 600;
-  padding: min(9vw, 60px) 0 min(1.5vw, 10px) 0em;
+  padding: min(6vw, 40px) 0 min(1.5vw, 10px) 0em;
   margin: 0;
   text-align: center;
 }
@@ -975,9 +1074,9 @@ h6 {
   bottom: 32.5%;
 }
 
-#offer .gallery-cell-bot p {
+#offer p {
   font-weight: 400;
-  padding: 0 10% min(3vh 20px) 10%;
+  padding: 0 10% min(3vh, 20px) 10%;
   margin: 0;
   text-align: center;
 }
@@ -1018,19 +1117,67 @@ h6 {
   right: -40px;
 }
 
+#offer .everfit {
+  margin: auto;
+  width: min(45vw, 300px);
+  margin-top: min(4.5vh, 30px);
+}
+
+@media (min-width: 1200px) {
+  #offer-container,
+  #offer {
+    background-color: #eef5ff;
+  }
+
+  #offer img {
+    width: 80%;
+  }
+
+  #offer #offer-entree-texts {
+    align-items: start;
+  }
+
+  #offer .offer-entree-text {
+    margin-bottom: min(3vw, 20px);
+    padding-left: min(1.5vw, 10px);
+    border-left: 3px solid var(--font-green-color);
+  }
+
+  #offer .selected h5,
+  #offer .selected p {
+    color: #0a0c1f;
+  }
+
+  #offer h1,
+  #offer h5,
+  #offer p {
+    text-align: left;
+  }
+
+  #offer h5 {
+    font-size: min(3vw, 20px);
+    padding: 0;
+    color: #7f8199;
+  }
+
+  #offer p {
+    padding: min(0.75vw, 5px) 0 0 0;
+    color: #7f8199;
+  }
+}
+
 /*-------------------------------------------------------------- # offer Section End --------------------------------------------------------------*/
 
 /*-------------------------------------------------------------- # howto Section Start --------------------------------------------------------------*/
 
-#howto {
-  background: var(--accent-bg-color);
-  padding: 10vh 0;
+@media (max-width: 800px) {
+  #howto-section-container {
+    padding: 10% 0%;
+  }
 }
 
-@media (min-width: 1200px) {
-  #howto {
-    padding: 5% 25%;
-  }
+#howto {
+  background: var(--accent-bg-color);
 }
 
 #howto .step {
@@ -1053,9 +1200,14 @@ h6 {
   text-align: left;
 }
 
+#howto .step .block.left,
+#howto .step .block.right {
+  min-width: 25vw;
+}
+
 #howto .step .block.right {
   margin-left: max(-7.5vh, -12.5vw);
-  padding-left: min(15vw, 6vh);
+  padding-left: min(12vw, 8vh);
   padding-right: 2.5vw;
 }
 
@@ -1104,23 +1256,46 @@ h6 {
   font-weight: 600;
 }
 
-#howto .step .block p {
-  font-size: min(3vw, 20px);
-  font-weight: 400;
-}
-
 /*-------------------------------------------------------------- # howto Section End --------------------------------------------------------------*/
 
 /*-------------------------------------------------------------- # employee Section Start --------------------------------------------------------------*/
 
 #employee-container {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 
-#employee img {
+#employee #employee-container-container {
+  flex-direction: column;
+}
+
+#employee .employee-description {
+  padding-bottom: 5vh;
+}
+
+#employee .employee-signature {
+  margin-left: auto;
+  width: min(15vw, 100px);
+  margin-top: min(1.5vh, 10px);
+}
+
+#employee .employee-image img {
   margin: auto;
-  padding-top: min(3vh, 20px);
   max-width: 65%;
+}
+
+@media (min-width: 1200px) {
+  #employee #employee-container-container {
+    flex-direction: row;
+  }
+
+  #employee #employee-container-container h1 {
+    text-align: left;
+  }
+
+  #employee .employee-description,
+  #employee .employee-image {
+    width: 50%;
+  }
 }
 
 /*-------------------------------------------------------------- # employee Section End --------------------------------------------------------------*/
@@ -1131,8 +1306,14 @@ h6 {
   background: var(--accent-bg-color);
 }
 
+.faq .faq-question,
+.faq button .icon {
+  color: var(--font-green-color);
+}
+
 .faq .faq-item {
   border-bottom: 1px solid light grey;
+  background: white;
 }
 
 .faq .faq-item button[aria-expanded='true'] {
@@ -1153,42 +1334,32 @@ h6 {
   width: 100%;
 }
 
-.faq button .faq-question {
-  width: 88%;
-  display: inline-block;
-}
-
 .faq button .icon {
   display: inline-block;
   position: absolute;
   top: 18px;
   width: 22px;
   height: 22px;
-  border: 1px solid;
-  border-radius: 22px;
-  right: 0%;
+  right: 3%;
 }
 
 .faq button .icon::before {
   display: block;
   position: absolute;
   content: '';
-  top: 9px;
-  left: 5px;
-  width: 10px;
-  height: 2px;
-  background: currentColor;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-top: none;
+  border-right: none;
 }
 
-.faq button .icon::after {
-  display: block;
-  position: absolute;
-  content: '';
-  top: 5px;
-  left: 9px;
-  width: 2px;
-  height: 10px;
-  background: currentColor;
+@media (min-width: 1200px) {
+  .faq button .icon::before {
+    top: 50%;
+  }
 }
 
 .faq button[aria-expanded='true'] + .faq-answer {
@@ -1208,7 +1379,6 @@ h6 {
 }
 
 .faq .faq-answer p {
-  font-size: min(3vw, 20px);
   line-height: 1.5em;
   margin: 1em 1em 1em 1em;
   text-align: justify;
@@ -1221,6 +1391,41 @@ h6 {
 #foot {
   background: var(--main-bg-color);
   align-items: center;
+}
+
+#foot #foot-container {
+  flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  #foot {
+    width: 100%;
+  }
+
+  #foot #foot-container .container,
+  #foot #foot-container {
+    display: inline;
+  }
+
+  #foot #foot-container h6,
+  #foot #foot-container p {
+    font-size: min(4.5vw, 15px) !important;
+    margin: min(1.5vw, 5px);
+    float: left;
+  }
+
+  #foot #foot-container .container i {
+    float: right;
+    margin: 0 15px;
+  }
+}
+
+#foot #logo-foot {
+  margin: auto;
+}
+
+#foot #logo-foot img {
+  width: min(60vw, 200px);
 }
 
 #foot h1,
@@ -1240,18 +1445,23 @@ h6 {
   text-shadow: 0px min(0.15vh, 1px) min(0.15vh, 1px) rgba(0, 0, 0, 0.25);
 }
 
-#foot .container {
+#foot #terms {
+  flex-flow: column;
   margin: min(3vh, 20px) 0;
 }
 
-#foot #terms {
-  flex-flow: column;
-  margin: min(6vh, 40px) 0;
+#foot hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #eceae7;
+  margin: min(4.5vh, 30px) 0;
 }
 
 #foot .container i {
   --ggs: 1;
   margin: 15px;
+  color: var(--font-green-color);
 }
 
 /*-------------------------------------------------------------- # foot Section End --------------------------------------------------------------*/

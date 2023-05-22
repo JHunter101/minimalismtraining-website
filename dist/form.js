@@ -139,21 +139,30 @@ function go_back() {
         update_progress();
     }
 }
-function unhide_elem(elem) {
+function addClass(elem, className) {
     const element = document.getElementById(elem);
     if (element) {
-        element.classList.remove('hidden');
+        element.classList.add(className);
     }
+}
+function removeClass(elem, className) {
+    const element = document.getElementById(elem);
+    if (element) {
+        element.classList.remove(className);
+    }
+}
+function toggleClass(elem, className) {
+    const element = document.getElementById(elem);
+    if (element) {
+        element.classList.toggle(className);
+    }
+}
+function unhide_elem(elem) {
+    removeClass(elem, 'hidden');
 }
 function hide_elem(elem) {
-    const element = document.getElementById(elem);
-    if (element) {
-        element.classList.add('hidden');
-    }
+    addClass(elem, 'hidden');
 }
 function toggle_hide(elem) {
-    const element = document.getElementById(elem);
-    if (element) {
-        element.classList.toggle('hidden');
-    }
+    toggleClass(elem, 'hidden');
 }

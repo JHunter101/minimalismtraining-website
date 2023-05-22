@@ -24,14 +24,16 @@
   <body>
     <div class="flex h-screen main-bg">
       <section id="main" class="section m-auto">
-        <h1 id="logo1">Minimalism</h1>
-        <h3>Training</h3>
+        <div class="air"></div>
+        <div id="logo" class="container">
+          <img src="res/images/logo.png" alt="logo" />
+        </div>
         <div id="vl-container" class="container">
           <div class="vl"></div>
         </div>
         <h4>Start your journey today</h4>
-        <div class="flex">
-          <h5>Scroll Down</h5>
+        <div id="scroll-down" class="container">
+          <img src="res/images/scroll down.png" alt="scroll down" />
         </div>
       </section>
     </div>
@@ -168,6 +170,9 @@
                 within 48 hours. I'm looking forward to it! Looking forward to
                 having you a part of my team very soon!
               </p>
+              <div class="employee-signature" class="container">
+                <img src="res/images/signature.png" alt="signature" />
+              </div>
             </div>
           </div>
         </form>
@@ -176,18 +181,52 @@
 
     <div class="section-container flex main-bg">
       <section id="slogan" class="section">
-        <h5>Click and find out more</h5>
-        <h2 onclick='toggle_hide("post-slogan")'>Busy Being Boring</h2>
-        <p id="post-slogan" class="hidden">
-          "We all feel pressure through social media or others, we challenge you
-          to be a better version of yourself."
-        </p>
+        <div id="slogan-container" class="container flex-wrap">
+          <h2
+            id="slogan-word-busy"
+            class="selected"
+            onclick='unhide_elem("busy-slogan"), hide_elem("being-slogan"), hide_elem("boring-slogan"),
+            addClass("slogan-word-busy", "selected"), removeClass("slogan-word-being", "selected"), removeClass("slogan-word-boring", "selected")
+            addClass("slogan-word-busy-span", "selected"), removeClass("slogan-word-being-span", "selected"), removeClass("slogan-word-boring-span", "selected")'
+          >
+            <span id="slogan-word-busy-span" class="selected">Bu</span>sy
+          </h2>
+          <h2
+            id="slogan-word-being"
+            onclick='hide_elem("busy-slogan"), unhide_elem("being-slogan"), hide_elem("boring-slogan"),
+            removeClass("slogan-word-busy", "selected"), addClass("slogan-word-being", "selected"), removeClass("slogan-word-boring", "selected")
+            removeClass("slogan-word-busy-span", "selected"), addClass("slogan-word-being-span", "selected"), removeClass("slogan-word-boring-span", "selected")'
+          >
+            <span id="slogan-word-being-span">Be</span>ing
+          </h2>
+          <h2
+            id="slogan-word-boring"
+            onclick='hide_elem("busy-slogan"), hide_elem("being-slogan"), unhide_elem("boring-slogan"),
+            removeClass("slogan-word-busy", "selected"), removeClass("slogan-word-being", "selected"), addClass("slogan-word-boring", "selected")
+            removeClass("slogan-word-busy-span", "selected"), removeClass("slogan-word-being-span", "selected"), addClass("slogan-word-boring-span", "selected")'
+          >
+            <span id="slogan-word-boring-span">Bo</span>ring
+          </h2>
+          <p id="busy-slogan" class="slogan-text">
+            "AAA We all feel pressure through social media or others, we
+            challenge you to be a better version of yourself."
+          </p>
+          <p id="being-slogan" class="slogan-text hidden">
+            "BBB We all feel pressure through social media or others, we
+            challenge you to be a better version of yourself."
+          </p>
+
+          <p id="boring-slogan" class="slogan-text hidden">
+            "CCC We all feel pressure through social media or others, we
+            challenge you to be a better version of yourself."
+          </p>
+        </div>
       </section>
     </div>
-    <div class="section-container alt-bg">
+    <div class="section-container section-container-desk-wide alt-bg">
       <section id="clients" class="section">
         <h1>Client Transformations</h1>
-        <div class="gallery js-flickity">
+        <div class="gallery js-flickity mobile-only">
           <div class="gallery-cell">
             <img src="res/images/clients/client_1.png" alt="Client A" />
           </div>
@@ -198,54 +237,175 @@
             <img src="res/images/clients/client_3.png" alt="Client C" />
           </div>
         </div>
+
+        <div class="container flex-row desktop-only">
+          <div class="gallery-cell lift">
+            <img src="res/images/clients/client_1.png" alt="Client A" />
+          </div>
+          <div class="gallery-cell drop">
+            <img src="res/images/clients/client_2.png" alt="Client B" />
+          </div>
+          <div class="gallery-cell lift">
+            <img src="res/images/clients/client_3.png" alt="Client C" />
+          </div>
+        </div>
       </section>
     </div>
 
-    <div class="section-container main-bg">
+    <div
+      id="offer-container"
+      class="section-container section-container-desk-wide main-bg"
+    >
       <section id="offer" class="section">
-        <h1>What do you get</h1>
-        <div class="gallery js-flickity">
-          <div class="gallery-cell">
-            <div class="gallery-cell-top">
-              <img src="res/images/offers/offer_1.png" alt="Training" />
+        <div class="mobile-only">
+          <h1>What do you get</h1>
+          <div class="gallery js-flickity">
+            <div class="gallery-cell">
+              <div class="gallery-cell-top">
+                <img src="res/images/offers/offer_1.png" alt="Training" />
+              </div>
+              <div class="gallery-cell-bot">
+                <h5>Training</h5>
+                <p>
+                  A customized plan for you to suit you anytime and anywhere.
+                </p>
+              </div>
             </div>
-            <div class="gallery-cell-bot">
+            <div class="gallery-cell">
+              <div class="gallery-cell-top">
+                <img src="res/images/offers/offer_2.png" alt="Nutrition" />
+              </div>
+              <div class="gallery-cell-bot">
+                <h5>Nutrition</h5>
+                <p>Your custom meal plan is made for a healthy lifestyle.</p>
+              </div>
+            </div>
+            <div class="gallery-cell">
+              <div class="gallery-cell-top">
+                <img
+                  src="res/images/offers/offer_3.png"
+                  alt="Progress tracking"
+                />
+              </div>
+              <div class="gallery-cell-bot">
+                <h5>Progress tracking</h5>
+                <p>
+                  We track your progress through weekly check-ins to ensure you
+                  stay on track with your goals.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-cell">
+              <div class="gallery-cell-top">
+                <img
+                  src="res/images/offers/offer_4.png"
+                  alt="Continuous communication"
+                />
+              </div>
+              <div class="gallery-cell-bot">
+                <h5>Continuous communication</h5>
+                <p>
+                  I am always only a text away for accountability and support.
+                  We got this!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="desktop-only container flex-row">
+          <div id="offer-entree-images" class="container flex-col">
+            <img
+              id="offer-entree-image-1"
+              class=""
+              src="res/images/offers/offer_1.png"
+              alt="Training"
+            />
+            <img
+              id="offer-entree-image-2"
+              class="hidden"
+              src="res/images/offers/offer_2.png"
+              alt="Nutrition"
+            />
+            <img
+              id="offer-entree-image-3"
+              class="hidden"
+              src="res/images/offers/offer_3.png"
+              alt="Progress tracking"
+            />
+            <img
+              id="offer-entree-image-4"
+              class="hidden"
+              src="res/images/offers/offer_4.png"
+              alt="Continuous communication"
+            />
+          </div>
+          <div id="offer-entree-texts" class="container flex-col">
+            <h1>What do you get</h1>
+            <div
+              id="offer-entree-text-1"
+              class="offer-entree-text selected"
+              onclick='addClass("offer-entree-text-1", "selected") 
+              removeClass("offer-entree-text-2", "selected")
+              removeClass("offer-entree-text-3", "selected")
+              removeClass("offer-entree-text-4", "selected")
+              unhide_elem("offer-entree-image-1", "selected")
+              hide_elem("offer-entree-image-2", "selected") 
+              hide_elem("offer-entree-image-3", "selected") 
+              hide_elem("offer-entree-image-4", "selected") 
+              '
+            >
               <h5>Training</h5>
               <p>A customized plan for you to suit you anytime and anywhere.</p>
             </div>
-          </div>
-          <div class="gallery-cell">
-            <div class="gallery-cell-top">
-              <img src="res/images/offers/offer_2.png" alt="Nutrition" />
-            </div>
-            <div class="gallery-cell-bot">
+            <div
+              id="offer-entree-text-2"
+              class="offer-entree-text"
+              onclick='removeClass("offer-entree-text-1", "selected") 
+            addClass("offer-entree-text-2", "selected")
+            removeClass("offer-entree-text-3", "selected")
+            removeClass("offer-entree-text-4", "selected")
+            hide_elem("offer-entree-image-1", "selected")
+            unhide_elem("offer-entree-image-2", "selected") 
+            hide_elem("offer-entree-image-3", "selected") 
+            hide_elem("offer-entree-image-4", "selected") 
+            '
+            >
               <h5>Nutrition</h5>
               <p>Your custom meal plan is made for a healthy lifestyle.</p>
             </div>
-          </div>
-          <div class="gallery-cell">
-            <div class="gallery-cell-top">
-              <img
-                src="res/images/offers/offer_3.png"
-                alt="Progress tracking"
-              />
-            </div>
-            <div class="gallery-cell-bot">
+            <div
+              id="offer-entree-text-3"
+              class="offer-entree-text"
+              onclick='removeClass("offer-entree-text-1", "selected") 
+            removeClass("offer-entree-text-2", "selected")
+            addClass("offer-entree-text-3", "selected")
+            removeClass("offer-entree-text-4", "selected")
+            hide_elem("offer-entree-image-1", "selected")
+            hide_elem("offer-entree-image-2", "selected") 
+            unhide_elem("offer-entree-image-3", "selected") 
+            hide_elem("offer-entree-image-4", "selected") 
+            '
+            >
               <h5>Progress tracking</h5>
               <p>
                 We track your progress through weekly check-ins to ensure you
                 stay on track with your goals.
               </p>
             </div>
-          </div>
-          <div class="gallery-cell">
-            <div class="gallery-cell-top">
-              <img
-                src="res/images/offers/offer_4.png"
-                alt="Continuous communication"
-              />
-            </div>
-            <div class="gallery-cell-bot">
+            <div
+              id="offer-entree-text-4"
+              class="offer-entree-text"
+              onclick='removeClass("offer-entree-text-1", "selected") 
+            removeClass("offer-entree-text-2", "selected")
+            removeClass("offer-entree-text-3", "selected")
+            addClass("offer-entree-text-4", "selected")
+            hide_elem("offer-entree-image-1", "selected")
+            hide_elem("offer-entree-image-2", "selected") 
+            hide_elem("offer-entree-image-3", "selected") 
+            unhide_elem("offer-entree-image-4", "selected") 
+            '
+            >
               <h5>Continuous communication</h5>
               <p>
                 I am always only a text away for accountability and support. We
@@ -254,13 +414,13 @@
             </div>
           </div>
         </div>
-        <div id="everfit">
-          <h3>Powered by Everfit</h3>
+        <div class="everfit" class="container">
+          <img src="res/images/everfit.png" alt="everfit" />
         </div>
       </section>
     </div>
 
-    <div class="flex alt-bg">
+    <div id="howto-section-container" class="section-container flex alt-bg">
       <section id="howto" class="section">
         <h3>Where to start?</h3>
         <div id="howto-step1" class="step right">
@@ -273,7 +433,6 @@
             <p class="right">
               To start this journey, complete my form so we can get in touch!
             </p>
-            <p class="right">Go to form</p>
           </div>
         </div>
 
@@ -302,26 +461,37 @@
       </section>
     </div>
 
-    <div id="employee-container" class="section-container flex main-bg">
+    <div
+      id="employee-container"
+      class="section-container section-container-desk-wide flex main-bg"
+    >
       <section id="employee" class="section">
-        <h1>Meet Ak!</h1>
-        <p>
-          My love and passion for health & fitness and helping you reach your
-          goals gives me energy. My mission is to challenge you to realise your
-          potential. We will work hard, go inward to claim the greatness we long
-          for, and attain immense confidence and self-love. Let’s get to work!
-        </p>
-        <br />
-        <p>
-          Online coaching allows you to reach your goals whilst having me as
-          your coach from anywhere. Developing a healthy, active lifestyle with
-          your busy schedule and other responsibilities is now realistic and
-          sustainable with my system. I will be there every step of the way to
-          guide you, motivate you, and hold you accountable for the goals you
-          are more than capable of achieving.
-        </p>
-        <div class="image-stack">
-          <img src="res/images/employees/ak.png" alt="Akbar Abawi" />
+        <div id="employee-container-container" class="container">
+          <div class="employee-description">
+            <h1>Meet Ak!</h1>
+            <p>
+              My love and passion for health & fitness and helping you reach
+              your goals gives me energy. My mission is to challenge you to
+              realise your potential. We will work hard, go inward to claim the
+              greatness we long for, and attain immense confidence and
+              self-love. Let’s get to work!
+            </p>
+            <br />
+            <p>
+              Online coaching allows you to reach your goals whilst having me as
+              your coach from anywhere. Developing a healthy, active lifestyle
+              with your busy schedule and other responsibilities is now
+              realistic and sustainable with my system. I will be there every
+              step of the way to guide you, motivate you, and hold you
+              accountable for the goals you are more than capable of achieving.
+            </p>
+            <div class="employee-signature" class="container">
+              <img src="res/images/signature.png" alt="signature" />
+            </div>
+          </div>
+          <div class="employee-image">
+            <img src="res/images/employees/ak.png" alt="Akbar Abawi" />
+          </div>
         </div>
       </section>
     </div>
@@ -495,24 +665,26 @@
       </section>
     </div>
 
-    <div class="section-container flex main-bg">
+    <div class="section-container section-container-desk-wide flex main-bg">
       <section id="foot" class="section">
-        <div id="terms" class="container">
-          <h1 id="logo-foot">Minimalism</h1>
-          <h3>Training</h3>
+        <div id="logo-foot" class="container">
+          <img src="res/images/logo.png" alt="logo" />
         </div>
-        <div id="terms" class="container">
-          <h6>Terms and conditions</h6>
-          <h6>Privacy Policy</h6>
-        </div>
-        <div class="container">
-          <i class="gg-instagram"></i>
-          <i class="gg-instagram"></i>
-        </div>
-        <div id="terms" class="container">
-          <p>Made with passion 🔥 in the Netherlands</p>
-          <p>© Minimalismtraining 2023.</p>
-          <p>All rights reserved.</p>
+        <hr />
+        <div id="foot-container" class="container">
+          <div id="terms" class="container">
+            <h6>Terms and conditions</h6>
+            <h6>Privacy Policy</h6>
+          </div>
+          <div class="container social-icons">
+            <i class="gg-instagram"></i>
+            <i class="gg-instagram"></i>
+          </div>
+          <div id="terms" class="container">
+            <p>Made with passion 🔥 in the Netherlands</p>
+            <p>© Minimalismtraining 2023.</p>
+            <p>All rights reserved.</p>
+          </div>
         </div>
       </section>
     </div>

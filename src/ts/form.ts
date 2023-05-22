@@ -135,7 +135,7 @@ function update_progress() {
     }
   }
 }
-function go_next() {
+function go_next(): void {
   const completedPages = JSON.parse(
     sessionStorage.getItem('completedPages') ?? '[]',
   );
@@ -160,7 +160,7 @@ function go_next() {
   }
 }
 
-function go_back() {
+function go_back(): void {
   let current_form_page = Number(sessionStorage.getItem('current_form_page'));
   if (current_form_page > 1) {
     hide_elem('form-q'.concat(current_form_page.toString()));
@@ -171,23 +171,34 @@ function go_back() {
   }
 }
 
-function unhide_elem(elem: string) {
+function addClass(elem: string, className: string): void {
   const element = document.getElementById(elem);
   if (element) {
-    element.classList.remove('hidden');
+    element.classList.add(className);
   }
 }
 
-function hide_elem(elem: string) {
+function removeClass(elem: string, className: string): void {
   const element = document.getElementById(elem);
   if (element) {
-    element.classList.add('hidden');
+    element.classList.remove(className);
   }
 }
 
-function toggle_hide(elem: string) {
+function toggleClass(elem: string, className: string): void {
   const element = document.getElementById(elem);
   if (element) {
-    element.classList.toggle('hidden');
+    element.classList.toggle(className);
   }
+}
+function unhide_elem(elem: string): void {
+  removeClass(elem, 'hidden');
+}
+
+function hide_elem(elem: string): void {
+  addClass(elem, 'hidden');
+}
+
+function toggle_hide(elem: string): void {
+  toggleClass(elem, 'hidden');
 }
