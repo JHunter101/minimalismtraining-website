@@ -942,11 +942,11 @@ h6 {
 #slogan h2,
 #slogan h2 span {
   color: var(--font-green-faded-color);
-  letter-spacing: min(0.3vw, 0.1rem);
+  letter-spacing: min(0.6vw, 0.2rem);
 }
 
 #slogan h2 {
-  margin: min(0.9vw, 3rem);
+  margin: min(1.8vw, 0.6rem);
 }
 
 #slogan h2:hover,
