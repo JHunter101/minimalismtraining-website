@@ -634,6 +634,10 @@ body {
   height: min(16vh, 4rem);
 }
 
+.h-screen {
+  height: clamp(100vh, 100%, 250vh);
+}
+
 /* General Section */
 
 .hidden {
@@ -706,6 +710,8 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  position: relative;
 }
 
 #main #logo img {
