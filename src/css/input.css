@@ -10,13 +10,14 @@
   --font-green-faded-color: #7c967d;
 }
 
-html * {
-  font-family: 'Kulim Park', sans-serif !important;
-  color: black;
+html {
+  font-size: 16px;
 }
 
 body {
-  margin: 0px;
+  margin: 0;
+  font-family: 'Kulim Park', sans-serif;
+  color: black;
 }
 
 .main-bg {
@@ -46,12 +47,10 @@ body {
 }
 
 .air {
-  height: 15vh;
+  height: min(16vh, 4rem);
 }
 
-/*-------------------------------------------------------------- # Base Section End--------------------------------------------------------------*/
-
-/*-------------------------------------------------------------- # General Section Start--------------------------------------------------------------*/
+/* General Section */
 
 .hidden {
   display: none !important;
@@ -68,6 +67,7 @@ body {
     display: none !important;
   }
 }
+
 .container {
   display: flex;
   justify-content: center;
@@ -78,8 +78,8 @@ h1,
 h2 {
   text-transform: capitalize;
   text-align: center;
-  font-size: min(7.5vw, 50px);
-  margin: min(2vh, 13.3px) 0;
+  font-size: min(7.5vw, 2.5rem);
+  margin: min(2vh, 0.5rem) 0;
   font-weight: 800;
 }
 
@@ -87,14 +87,14 @@ h3,
 h4 {
   text-align: center;
   text-transform: capitalize;
-  font-size: min(6vw, 40px);
+  font-size: min(6vw, 2rem);
   font-weight: 600;
 }
 
 h5,
 h6,
 p {
-  font-size: min(3vw, 20px);
+  font-size: min(3vw, 1rem);
   text-align: left;
   font-weight: 400;
 }
@@ -115,29 +115,34 @@ h6 {
   font-weight: 600;
 }
 
-/*-------------------------------------------------------------- # General Section End--------------------------------------------------------------*/
-
-/*-------------------------------------------------------------- # main Section Start --------------------------------------------------------------*/
-
-#main #logo img {
-  width: min(90vw, 600px);
+/* Main Section */
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#main #scroll-down img {
-  width: min(45vw, 300px);
-  margin: min(4.5vh, 30px) 0 min(4.5vh, 30px) min(4.5vw, 30px);
+#main #logo img {
+  width: min(90vw, 30rem);
+}
+
+#main #scroll-down {
+  width: min(45vw, 15rem);
+  bottom: 2%;
+  position: absolute;
 }
 
 #main #vl-container {
-  margin: min(9vh, 60px) 0;
+  margin: min(8vh, 2rem) 0;
 }
 
 #main #vl-container .vl {
   text-align: center;
-  border-left: min(0.3vh, 2px) solid #0a0c1f;
-  height: min(45vh, 200px);
+  border-left: min(0.4vh, 0.1rem) solid #0a0c1f;
+  height: min(40vh, 10rem);
   display: flex;
-  justify-content: center; /* center the child elements horizontally */
+  justify-content: center;
 }
 
 #main h1,
@@ -147,19 +152,18 @@ h6 {
 }
 
 #main h1 {
-  font-size: min(12vw, 80px);
+  font-size: min(12vw, 4rem);
   font-weight: 1000;
-  letter-spacing: min(0.12vw, 0.8px);
+  letter-spacing: min(0.12vw, 0.4rem);
 }
 
 #main h3 {
-  letter-spacing: min(3vw, 20px);
-  text-shadow: 0px min(0.15vh, 1px) min(0.15vh, 1px) rgba(0, 0, 0, 0.25);
+  letter-spacing: min(3vw, 1rem);
+  text-shadow: 0px min(0.16vh, 0.04rem) min(0.16vh, 0.04rem) rgba(0, 0, 0, 0.25);
 }
 
 #main h4 {
-  letter-spacing: min(0.6vw, 2px);
-  text-shadow: 0px 0px min(0.3vh, 2px) rgba(0, 0, 0, 0.25);
+  letter-spacing: min(0.6vw, 0.2rem);
 }
 
 /*-------------------------------------------------------------- # main Section End --------------------------------------------------------------*/
@@ -177,68 +181,58 @@ h6 {
   display: grid;
   grid-template-columns: repeat(9, minmax(0px, 1fr));
   grid-template-rows: repeat(1, minmax(0px, 1fr));
-  gap: min(1.5vw, 10px);
+  gap: min(1.5vw, 0.5rem);
   place-items: center stretch;
   margin: auto;
-  padding: min(9vw, 60px) 0;
-  width: min(80vw, 500px);
+  padding: min(9vw, 3rem) 0;
+  width: min(75vw, 25rem);
 }
 
 #form #form-progress .numberCircle {
   color: grey;
-
   border-radius: 50%;
-  border: min(0.3vh, 2px) solid grey;
+  border: min(0.3vw, 0.1rem) solid grey;
   aspect-ratio: 1/1;
-
-  font-size: min(4.5vw, 30px);
+  font-size: min(4.5vw, 1.5rem);
 }
 
 #form #form-progress .numberCircle.current {
   background: #fff;
-  border: min(0.3vh, 2px) solid var(--font-green-color);
+  border: min(0.3vw, 0.1rem) solid var(--font-green-color);
   color: var(--font-green-color);
 }
 
 #form #form-progress .numberCircle.progressed {
   background: var(--font-green-color);
-  border: min(0.3vh, 2px) solid white;
+  border: min(0.3vw, 1rem) solid white;
   color: white;
 }
 
 #form #form-progress .progress-separator {
-  border-bottom: min(0.3vh, 2px) solid grey;
+  border-bottom: min(0.4vh, 0.1rem) solid grey;
 }
 
 /* QA */
-#form #form-qs {
-  min-height: 45vh;
-}
 
 #form label {
   display: block;
-  min-height: 10vh;
-  font-size: min(4.5vw, 30px);
+  font-size: min(4.5vw, 1.5rem);
 }
 
 #form .form-a {
-  margin: min(6vh, 20px) 0;
+  margin: min(6vh, 1.5rem) 0;
 }
 
 #form .form-a textarea {
-  border-radius: min(0.9vh, 60px);
-  padding: min(3vh, 20px);
+  border-radius: min(0.8vh, 0.2rem);
+  padding: min(4vh, 1rem);
   width: 100%;
-  height: 30vh;
-  font-size: min(4.5vw, 30px);
-}
-
-#form #form-q5 label {
-  min-height: 0;
+  height: min(32vh, 8rem);
+  font-size: min(4.5vw, 1.5rem);
 }
 
 #form #form-q5 .form-a label {
-  font-size: min(4vw, 20px);
+  font-size: min(4.5vw, 1rem);
   display: inline-block;
   width: 33%;
   height: 0;
@@ -247,12 +241,12 @@ h6 {
 
 #form #form-q5 input[type='text'],
 #form #form-q5 select {
-  font-size: min(4vw, 20px);
-  margin: min(1.5vh, 10px) 0;
-  padding: 0 min(1.5vh, 10px);
-  border-radius: min(1.5vh, 10px);
+  font-size: min(4.5vw, 1rem);
+  margin: min(1.6vh, 0.4rem) 0;
+  padding: 0 min(1.6vh, 0.4rem);
+  border-radius: min(1.6vh, 0.4rem);
   width: 63%;
-  height: min(6vh, 40px);
+  height: min(6vh, 3rem);
 }
 
 #form #form-q5 select {
@@ -262,28 +256,28 @@ h6 {
   background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>');
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: min(3vh, 20px);
+  background-size: min(3.2vh, 0.8rem);
   cursor: pointer;
-  padding-right: min(3vh, 20px); /* Adjust padding to match input element */
+  padding-right: min(3.2vh, 0.8rem); /* Adjust padding to match input element */
 }
 
 #form #form-q5 #form-agreement {
-  margin: min(1.5vh, 10px) 0;
+  margin: min(1.6vh, 0.4rem) 0;
 }
 
 /* Buttons */
 #form button {
   background-color: white;
-  margin: min(1.5vh, 10px);
-  width: min(95%, 35vh);
-  height: min(7.5vh, 50px);
+  margin: min(1.6vh, 0.4rem);
+  width: min(45vw, 15rem);
+  height: min(10vh, 2.5rem);
 
-  font-size: min(4.5vw, 25px);
+  font-size: min(4.5vw, 1rem);
   color: var(--font-green-color);
   font-weight: 600;
 
-  border-radius: min(1.5vh, 10px);
-  border: min(0.3vh, 2px) solid var(--font-green-color);
+  border-radius: min(1.6vh, 0.4rem);
+  border: min(0.4vh, 0.1rem) solid var(--font-green-color);
 }
 
 #form button.selected {
@@ -292,7 +286,7 @@ h6 {
 }
 
 #form #form-buttons button {
-  width: min(24vw, 160px);
+  width: min(24vw, 6rem);
 }
 
 #form #form-buttons button.completed {
@@ -311,9 +305,9 @@ h6 {
 }
 
 #form #form-post h3 {
-  font-size: min(6vw, 40px);
-  line-height: min(6vw, 40px);
-  margin-bottom: min(3vh, 20px);
+  font-size: min(6vw, 2rem);
+  line-height: min(6vw, 2rem);
+  margin-bottom: min(3vh, 1rem);
   text-align: left;
 }
 
@@ -331,8 +325,8 @@ h6 {
 
 #form .employee-signature {
   margin-left: auto;
-  width: min(15vw, 100px);
-  margin-top: min(1.5vh, 10px);
+  width: min(16vw, 4rem);
+  margin-top: min(1.6vh, 0.4rem);
 }
 
 /* @media (min-width: 1200px) {
@@ -361,12 +355,11 @@ h6 {
 #slogan h2,
 #slogan h2 span {
   color: var(--font-green-faded-color);
-  font-size: min(5vw, 75px);
-  letter-spacing: min(0.5vw, 7.5px);
+  letter-spacing: min(0.3vw, 0.1rem);
 }
 
 #slogan h2 {
-  margin: min(2vw, 30px);
+  margin: min(0.9vw, 3rem);
 }
 
 #slogan h2:hover,
@@ -380,16 +373,6 @@ h6 {
   text-decoration: underline;
 }
 
-#slogan .slogan-text {
-  flex-basis: 70vw;
-}
-
-@media screen and (min-width: 1200px) {
-  #slogan .slogan-text {
-    flex-basis: 40vw;
-  }
-}
-
 /*-------------------------------------------------------------- # slogan Section End --------------------------------------------------------------*/
 
 /*-------------------------------------------------------------- # clients Section Start --------------------------------------------------------------*/
@@ -400,7 +383,7 @@ h6 {
 
 #clients .gallery-cell {
   width: 80%;
-  margin-right: min(6vh, 20px);
+  margin-right: min(6vh, 1.5rem);
   counter-increment: gallery-cell;
 }
 
@@ -411,11 +394,11 @@ h6 {
   }
 
   #clients .lift {
-    margin: 0 0 5vh 0;
+    margin: 0 0 min(8vh, 2rem) 0;
   }
 
   #clients .drop {
-    margin: 5vh 0 0 0;
+    margin: min(8vh, 2rem) 0 0 0;
   }
 }
 
@@ -466,21 +449,21 @@ h6 {
 }
 
 #offer h5 {
-  font-size: min(6vw, 40px);
+  font-size: min(6vw, 2rem);
   font-weight: 600;
-  padding: min(6vw, 40px) 0 min(1.5vw, 10px) 0em;
+  padding: min(6vw, 2rem) 0 min(1.5vw, 0.5rem) 0em;
   margin: 0;
   text-align: center;
 }
 
 /* position dots in carousel */
 #offer .flickity-page-dots {
-  bottom: 32.5%;
+  bottom: 28%;
 }
 
 #offer p {
   font-weight: 400;
-  padding: 0 10% min(3vh, 20px) 10%;
+  padding: 0 10% min(4vh, 1rem) 10%;
   margin: 0;
   text-align: center;
 }
@@ -506,18 +489,11 @@ h6 {
 #offer .flickity-button-icon {
   fill: white;
 }
-/* position outside */
-#offer .flickity-prev-next-button.previous {
-  left: -40px;
-}
-#offer .flickity-prev-next-button.next {
-  right: -40px;
-}
 
 #offer .everfit {
   margin: auto;
-  width: min(45vw, 300px);
-  margin-top: min(4.5vh, 30px);
+  width: min(45vw, 15rem);
+  margin-top: min(4.5vh, 1.5rem);
 }
 
 @media (min-width: 1200px) {
@@ -535,9 +511,9 @@ h6 {
   }
 
   #offer .offer-entree-text {
-    margin-bottom: min(3vw, 20px);
-    padding-left: min(1.5vw, 10px);
-    border-left: 3px solid var(--font-green-color);
+    margin-bottom: min(3vw, 1rem);
+    padding-left: min(1.5vw, 0.5rem);
+    border-left: min(0.6vw, 0.2rem) solid var(--font-green-color);
   }
 
   #offer .selected h5,
@@ -552,13 +528,13 @@ h6 {
   }
 
   #offer h5 {
-    font-size: min(3vw, 20px);
+    font-size: min(3vw, 1rem);
     padding: 0;
     color: #7f8199;
   }
 
   #offer p {
-    padding: min(0.75vw, 5px) 0 0 0;
+    padding: min(0.75vw, 0.25rem) 0 0 0;
     color: #7f8199;
   }
 }
@@ -577,8 +553,8 @@ h6 {
 }
 
 #howto .step {
-  margin: min(7.5vh, 50px) 0;
-  height: min(15vh, 25vw);
+  margin: min(8vh, 2rem) 0;
+  height: min(16vh, 25vw);
   display: grid;
   grid-template-columns: repeat(4, minmax(0px, 1fr));
   grid-template-rows: repeat(1, minmax(0px, 1fr));
@@ -649,7 +625,7 @@ h6 {
 }
 
 #howto .step .block h5 {
-  font-size: min(5vw, 33.3px);
+  font-size: min(4.5vw, 1.5rem);
   font-weight: 600;
 }
 
@@ -669,14 +645,10 @@ h6 {
   padding-bottom: 5vh;
 }
 
-#employee .employee-description {
-  padding-bottom: 5vh;
-}
-
 #employee .employee-signature {
   margin-left: auto;
-  width: min(15vw, 100px);
-  margin-top: min(1.5vh, 10px);
+  width: min(16vw, 4rem);
+  margin-top: min(1.6vh, 0.4rem);
 }
 
 #employee .employee-image img {
@@ -725,7 +697,7 @@ h6 {
   text-align: left;
   padding: 1em 3em 1em 1em;
   color: var(--font-green-color);
-  font-size: min(3vw, 20px);
+  font-size: min(3vw, 1rem);
   font-weight: 600;
   border: none;
   background: none;
@@ -823,7 +795,7 @@ h6 {
 }
 
 #foot #logo-foot img {
-  width: min(60vw, 200px);
+  width: min(60vw, 15rem);
 }
 
 #foot h1,
@@ -833,19 +805,19 @@ h6 {
 }
 
 #foot h1 {
-  font-size: min(12vw, 80px);
+  font-size: min(12vw, 4rem);
   font-weight: 1000;
-  letter-spacing: min(0.12vw, 0.8px);
+  letter-spacing: min(0.12vw, 0.3rem);
 }
 
 #foot h3 {
-  letter-spacing: min(3vw, 20px);
-  text-shadow: 0px min(0.15vh, 1px) min(0.15vh, 1px) rgba(0, 0, 0, 0.25);
+  letter-spacing: min(3.2vw, 0.8rem);
+  text-shadow: 0px min(0.16vh, 0.4rem) min(0.16vh, 1px) rgba(0, 0, 0, 0.25);
 }
 
 #foot #terms {
   flex-flow: column;
-  margin: min(3vh, 20px) 0;
+  margin: min(3vh, 1rem) 0;
 }
 
 #foot hr {
