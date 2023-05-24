@@ -51,7 +51,7 @@ body {
 }
 
 .h-screen {
-  height: clamp(100vh, 100%, 250vh);
+  height: clamp(100vh, 100vh, 250vh);
 }
 
 /* General Section */
