@@ -634,9 +634,10 @@ body {
   height: min(16vh, 4rem);
 }
 
+/* 
 .h-screen {
   height: clamp(100vh, 100vh, 250vh);
-}
+} */
 
 /* General Section */
 
