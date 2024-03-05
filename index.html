@@ -1,354 +1,1019 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Minimalismtraining Website</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="dist/css/output.css" />
-    <link rel="stylesheet" href="dep/css/flickity.css" media="screen" />
-    <!-- css.gg -->
-    <link href="https://css.gg/css" rel="stylesheet" />
+	<head>
+		<title>Minimalismtraining Website v1.2.0</title>
+		<link href="https://fonts.cdnfonts.com/css/kulim-park" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="dist/css/output.css" />
+		<link rel="stylesheet" href="dep/css/flickity.css" media="screen" />
+		<!-- css.gg -->
+		<link href="https://css.gg/css" rel="stylesheet" />
 
-    <!-- UNPKG -->
-    <link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />
+		<!-- UNPKG -->
+		<link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />
 
-    <!-- JSDelivr -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/css.gg/icons/all.css"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <div class="flex h-screen main-bg">
-      <section id="main" class="section m-auto">
-        <div class="air"></div>
-        <div id="logo" class="container">
-          <img src="res/images/logo.png" alt="logo" />
-        </div>
-        <div id="vl-container" class="container">
-          <div class="vl"></div>
-        </div>
-        <h4>Start your journey today</h4>
-        <div id="scroll-down" class="">
-          <img src="res/images/scroll down.png" alt="scroll down" />
-        </div>
-      </section>
-    </div>
-    <div class="section-container flex alt-bg">
-      <section id="form" class="section">
-        <form>
-          <div id="form-progress">
-            <div id="progress_1" class="numberCircle current">1</div>
-            <div id="progress_1" class="progress-separator"></div>
-            <div id="progress_2" class="numberCircle">2</div>
-            <div id="progress_2" class="progress-separator"></div>
-            <div id="progress_3" class="numberCircle">3</div>
-            <div id="progress_3" class="progress-separator"></div>
-            <div id="progress_4" class="numberCircle">4</div>
-            <div id="progress_4" class="progress-separator"></div>
-            <div id="progress_5" class="numberCircle">5</div>
-          </div>
-          <div id="form-qs">
-            <div id="form-q1">
-              <label for="q1">How can I help you?</label>
-              <div class="form-a">
-                <button id="q1b1" type="button" class="qbutton" onclick="">
-                  Build muscle
-                </button>
-                <button id="q1b2" type="button" class="qbutton" onclick="">
-                  Weight loss
-                </button>
-                <button id="q1b3" type="button" class="qbutton" onclick="">
-                  Healthy lifestyle
-                </button>
-              </div>
-            </div>
-            <div id="form-q2" class="hidden">
-              <label for="q2"
-                >What is currently holding you back from reaching your
-                goals?</label
-              >
-              <div class="form-a">
-                <textarea
-                  placeholder="Your Motivation..."
-                  id="q2"
-                  spellcheck="true"
-                ></textarea>
-              </div>
-            </div>
-            <div id="form-q3" class="hidden">
-              <label for="q3">What is your motivation to start now?</label>
-              <div class="form-a">
-                <textarea
-                  placeholder="Your Motivation..."
-                  id="q3"
-                  spellcheck="true"
-                ></textarea>
-              </div>
-            </div>
-            <div id="form-q4" class="hidden">
-              <label for="q4"
-                >Are you ready to commit financially & time wise through online
-                coaching, work out plans and accountability to reach your goals
-                for a minimum of 3 months?</label
-              >
-              <div class="form-a">
-                <button id="q4b1" type="button" class="qbutton" onclick="">
-                  Yes!
-                </button>
-                <button id="q4b2" type="button" class="qbutton" onclick="">
-                  Yes, but I am nervous
-                </button>
-              </div>
-            </div>
-            <div id="form-q5" class="hidden">
-              <label for="q5">Last step! Fill in the form:</label>
-              <div class="form-a">
-                <label for="q51">Your full name</label>
-                <input type="text" placeholder="Name" id="q51" name="q51" />
-                <label for="q52">Your email</label>
-                <input
-                  type="text"
-                  placeholder="example@gmail.com"
-                  id="q52"
-                  name="q52"
-                />
-                <label for="q53">Phone number</label>
-                <input
-                  type="text"
-                  placeholder="+31 6 12345678"
-                  id="q53"
-                  name="q53"
-                />
-                <label for="q54">Country</label>
-                <select id="q54" name="country">
-                  <option value="" disabled selected>
-                    Select your country
-                  </option>
-                  <option value="AF">Afghanistan</option>
-                  <option value="AX">Aland Islands</option>
-                  <option value="AL">Albania</option>
-                </select>
-              </div>
-              <div id="form-agreement">
-                <p>
-                  When you submit the form, we process the personal data you
-                  provide. You can read more about Akbar Abawi’s processing of
-                  your personal data and your rights in our data policy.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="form-buttons">
-            <button
-              id="form-button-back"
-              class=""
-              type="button"
-              onclick="go_back()"
-            >
-              Back
-            </button>
-            <button
-              id="form-button-next"
-              class=""
-              type="button"
-              onclick="go_next()"
-            >
-              Next
-            </button>
-          </div>
+		<!-- JSDelivr -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/css.gg/icons/all.css"
+			rel="stylesheet"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
 
-          <div id="form-post-container" class="flex hidden">
-            <div id="form-post">
-              <i class="gg-check-o"></i>
-              <h3>The first step is in the bag! High-fives all around!</h3>
-              <p>
-                Well done, the first step has been taken. I will contact you
-                within 48 hours. I'm looking forward to it! Looking forward to
-                having you a part of my team very soon!
-              </p>
-              <div class="employee-signature">
-                <img src="res/images/signature.png" alt="signature" />
-              </div>
-            </div>
-          </div>
-        </form>
-      </section>
-    </div>
+	<body>
+		<div class="flex h-screen main-bg">
+			<section id="main" class="section m-auto">
+				<div class="air"></div>
+				<div id="logo" class="container">
+					<img src="res/images/logo.png" alt="logo" />
+				</div>
+				<div id="vl-container" class="container">
+					<div class="vl"></div>
+				</div>
+				<h4>Start your journey today</h4>
+				<div id="scroll-down" class="">
+					<img src="res/images/scroll down.png" alt="scroll down" />
+				</div>
+			</section>
+		</div>
+		<div class="section-container flex alt-bg">
+			<section id="form" class="section">
+				<div id="form-progress">
+					<div id="progress_1" class="numberCircle current">1</div>
+					<div id="progress_1" class="progress-separator"></div>
+					<div id="progress_2" class="numberCircle">2</div>
+					<div id="progress_2" class="progress-separator"></div>
+					<div id="progress_3" class="numberCircle">3</div>
+					<div id="progress_3" class="progress-separator"></div>
+					<div id="progress_4" class="numberCircle">4</div>
+					<div id="progress_4" class="progress-separator"></div>
+					<div id="progress_5" class="numberCircle">5</div>
+				</div>
+				<form id="registration-form" action="send_mail.php" method="post">
+					<div id="form-qs">
+						<div id="form-q1">
+							<label for="q1">How can I help you?</label>
+							<div class="form-a">
+								<input type="hidden" id="q1" name="q1" value="" />
+								<button
+									id="q1b1"
+									type="button"
+									class="qbutton"
+									onclick="setQ1('Build muscle')"
+								>
+									Build muscle
+								</button>
+								<button
+									id="q1b2"
+									type="button"
+									class="qbutton"
+									onclick="setQ1('Weight loss')"
+								>
+									Weight loss
+								</button>
+								<button
+									id="q1b3"
+									type="button"
+									class="qbutton"
+									onclick="setQ1('Healthy lifestyle')"
+								>
+									Healthy lifestyle
+								</button>
+							</div>
+						</div>
+						<div id="form-q2" class="hidden">
+							<label for="q2"
+								>What is currently holding you back from reaching your
+								goals?</label
+							>
+							<div class="form-a">
+								<textarea
+									placeholder="Your Motivation..."
+									id="q2"
+									name="q2"
+									spellcheck="true"
+								></textarea>
+							</div>
+						</div>
+						<div id="form-q3" class="hidden">
+							<label for="q3"
+								>What is your motivation to start now?</label
+							>
+							<div class="form-a">
+								<textarea
+									placeholder="Your Motivation..."
+									id="q3"
+									name="q3"
+									spellcheck="true"
+								></textarea>
+							</div>
+						</div>
+						<div id="form-q4" class="hidden">
+							<label for="q4"
+								>Are you ready to commit financially & time wise through
+								online coaching, work out plans and accountability to
+								reach your goals for a minimum of 3 months?</label
+							>
+							<div class="form-a">
+								<input type="hidden" id="q4" name="q4" value="" />
+								<button
+									id="q4b1"
+									type="button"
+									class="qbutton"
+									onclick="setQ4('Yes!')"
+								>
+									Yes!
+								</button>
+								<button
+									id="q4b2"
+									type="button"
+									class="qbutton"
+									onclick="setQ4('Yes, but I am nervous')"
+								>
+									Yes, but I am nervous
+								</button>
+							</div>
+						</div>
+						<div id="form-q5" class="hidden">
+							<label for="q5">Last step! Fill in the form:</label>
+							<div class="form-a">
+								<label for="q51">Your full name</label>
+								<input
+									type="text"
+									placeholder="Name"
+									id="q51"
+									name="name"
+									required
+								/>
+								<label for="q52">Your email</label>
+								<input
+									type="text"
+									placeholder="example@gmail.com"
+									id="q52"
+									name="email"
+									required
+								/>
+								<label for="q53">Phone number</label>
+								<input
+									type="text"
+									placeholder="+31 6 12345678"
+									id="q53"
+									name="phone"
+									required
+								/>
+								<label for="q54">Country</label>
+								<select id="q54" name="country" required>
+									<option value="" disabled selected>
+										Select your country
+									</option>
+									<option value="Afghanistan">Afghanistan</option>
 
-    <div class="section-container flex main-bg">
-      <section id="slogan" class="section">
-        <div class="click-me">
-          <img src="res/images/click and find out more.png" alt="click me" />
-        </div>
-        <div id="slogan-container" class="container flex-wrap">
-          <h2
-            id="slogan-word-busy"
-            class="selected"
-            onclick='unhide_elem("busy-slogan"), hide_elem("being-slogan"), hide_elem("boring-slogan"),
+									<option value="Åland Islands">Åland Islands</option>
+
+									<option value="Albania">Albania</option>
+
+									<option value="Algeria">Algeria</option>
+
+									<option value="American Samoa">
+										American Samoa
+									</option>
+
+									<option value="Andorra">Andorra</option>
+
+									<option value="Angola">Angola</option>
+
+									<option value="Anguilla">Anguilla</option>
+
+									<option value="Antarctica">Antarctica</option>
+
+									<option value="Antigua and Barbuda">
+										Antigua and Barbuda
+									</option>
+
+									<option value="Argentina">Argentina</option>
+
+									<option value="Armenia">Armenia</option>
+
+									<option value="Aruba">Aruba</option>
+
+									<option value="Australia">Australia</option>
+
+									<option value="Austria">Austria</option>
+
+									<option value="Azerbaijan">Azerbaijan</option>
+
+									<option value="Bahamas">Bahamas</option>
+
+									<option value="Bahrain">Bahrain</option>
+
+									<option value="Bangladesh">Bangladesh</option>
+
+									<option value="Barbados">Barbados</option>
+
+									<option value="Belarus">Belarus</option>
+
+									<option value="Belgium">Belgium</option>
+
+									<option value="Belize">Belize</option>
+
+									<option value="Benin">Benin</option>
+
+									<option value="Bermuda">Bermuda</option>
+
+									<option value="Bhutan">Bhutan</option>
+
+									<option value="Bolivia">Bolivia</option>
+
+									<option value="Bosnia and Herzegovina">
+										Bosnia and Herzegovina
+									</option>
+
+									<option value="Botswana">Botswana</option>
+
+									<option value="Bouvet Island">Bouvet Island</option>
+
+									<option value="Brazil">Brazil</option>
+
+									<option value="British Indian Ocean Territory">
+										British Indian Ocean Territory
+									</option>
+
+									<option value="Brunei Darussalam">
+										Brunei Darussalam
+									</option>
+
+									<option value="Bulgaria">Bulgaria</option>
+
+									<option value="Burkina Faso">Burkina Faso</option>
+
+									<option value="Burundi">Burundi</option>
+
+									<option value="Cambodia">Cambodia</option>
+
+									<option value="Cameroon">Cameroon</option>
+
+									<option value="Canada">Canada</option>
+
+									<option value="Cape Verde">Cape Verde</option>
+
+									<option value="Cayman Islands">
+										Cayman Islands
+									</option>
+
+									<option value="Central African Republic">
+										Central African Republic
+									</option>
+
+									<option value="Chad">Chad</option>
+
+									<option value="Chile">Chile</option>
+
+									<option value="China">China</option>
+
+									<option value="Christmas Island">
+										Christmas Island
+									</option>
+
+									<option value="Cocos (Keeling) Islands">
+										Cocos (Keeling) Islands
+									</option>
+
+									<option value="Colombia">Colombia</option>
+
+									<option value="Comoros">Comoros</option>
+
+									<option value="Congo">Congo</option>
+
+									<option
+										value="Congo, The Democratic Republic of The"
+									>
+										Congo, The Democratic Republic of The
+									</option>
+
+									<option value="Cook Islands">Cook Islands</option>
+
+									<option value="Costa Rica">Costa Rica</option>
+
+									<option value="Cote D'ivoire">Cote D'ivoire</option>
+
+									<option value="Croatia">Croatia</option>
+
+									<option value="Cuba">Cuba</option>
+
+									<option value="Cyprus">Cyprus</option>
+
+									<option value="Czech Republic">
+										Czech Republic
+									</option>
+
+									<option value="Denmark">Denmark</option>
+
+									<option value="Djibouti">Djibouti</option>
+
+									<option value="Dominica">Dominica</option>
+
+									<option value="Dominican Republic">
+										Dominican Republic
+									</option>
+
+									<option value="Ecuador">Ecuador</option>
+
+									<option value="Egypt">Egypt</option>
+
+									<option value="El Salvador">El Salvador</option>
+
+									<option value="Equatorial Guinea">
+										Equatorial Guinea
+									</option>
+
+									<option value="Eritrea">Eritrea</option>
+
+									<option value="Estonia">Estonia</option>
+
+									<option value="Ethiopia">Ethiopia</option>
+
+									<option value="Falkland Islands (Malvinas)">
+										Falkland Islands (Malvinas)
+									</option>
+
+									<option value="Faroe Islands">Faroe Islands</option>
+
+									<option value="Fiji">Fiji</option>
+
+									<option value="Finland">Finland</option>
+
+									<option value="France">France</option>
+
+									<option value="French Guiana">French Guiana</option>
+
+									<option value="French Polynesia">
+										French Polynesia
+									</option>
+
+									<option value="French Southern Territories">
+										French Southern Territories
+									</option>
+
+									<option value="Gabon">Gabon</option>
+
+									<option value="Gambia">Gambia</option>
+
+									<option value="Georgia">Georgia</option>
+
+									<option value="Germany">Germany</option>
+
+									<option value="Ghana">Ghana</option>
+
+									<option value="Gibraltar">Gibraltar</option>
+
+									<option value="Greece">Greece</option>
+
+									<option value="Greenland">Greenland</option>
+
+									<option value="Grenada">Grenada</option>
+
+									<option value="Guadeloupe">Guadeloupe</option>
+
+									<option value="Guam">Guam</option>
+
+									<option value="Guatemala">Guatemala</option>
+
+									<option value="Guernsey">Guernsey</option>
+
+									<option value="Guinea">Guinea</option>
+
+									<option value="Guinea-bissau">Guinea-bissau</option>
+
+									<option value="Guyana">Guyana</option>
+
+									<option value="Haiti">Haiti</option>
+
+									<option value="Heard Island and Mcdonald Islands">
+										Heard Island and Mcdonald Islands
+									</option>
+
+									<option value="Holy See (Vatican City State)">
+										Holy See (Vatican City State)
+									</option>
+
+									<option value="Honduras">Honduras</option>
+
+									<option value="Hong Kong">Hong Kong</option>
+
+									<option value="Hungary">Hungary</option>
+
+									<option value="Iceland">Iceland</option>
+
+									<option value="India">India</option>
+
+									<option value="Indonesia">Indonesia</option>
+
+									<option value="Iran, Islamic Republic of">
+										Iran, Islamic Republic of
+									</option>
+
+									<option value="Iraq">Iraq</option>
+
+									<option value="Ireland">Ireland</option>
+
+									<option value="Isle of Man">Isle of Man</option>
+
+									<option value="Israel">Israel</option>
+
+									<option value="Italy">Italy</option>
+
+									<option value="Jamaica">Jamaica</option>
+
+									<option value="Japan">Japan</option>
+
+									<option value="Jersey">Jersey</option>
+
+									<option value="Jordan">Jordan</option>
+
+									<option value="Kazakhstan">Kazakhstan</option>
+
+									<option value="Kenya">Kenya</option>
+
+									<option value="Kiribati">Kiribati</option>
+
+									<option
+										value="Korea, Democratic People's Republic of"
+									>
+										Korea, Democratic People's Republic of
+									</option>
+
+									<option value="Korea, Republic of">
+										Korea, Republic of
+									</option>
+
+									<option value="Kuwait">Kuwait</option>
+
+									<option value="Kyrgyzstan">Kyrgyzstan</option>
+
+									<option value="Lao People's Democratic Republic">
+										Lao People's Democratic Republic
+									</option>
+
+									<option value="Latvia">Latvia</option>
+
+									<option value="Lebanon">Lebanon</option>
+
+									<option value="Lesotho">Lesotho</option>
+
+									<option value="Liberia">Liberia</option>
+
+									<option value="Libyan Arab Jamahiriya">
+										Libyan Arab Jamahiriya
+									</option>
+
+									<option value="Liechtenstein">Liechtenstein</option>
+
+									<option value="Lithuania">Lithuania</option>
+
+									<option value="Luxembourg">Luxembourg</option>
+
+									<option value="Macao">Macao</option>
+
+									<option
+										value="Macedonia, The Former Yugoslav Republic of"
+									>
+										Macedonia, The Former Yugoslav Republic of
+									</option>
+
+									<option value="Madagascar">Madagascar</option>
+
+									<option value="Malawi">Malawi</option>
+
+									<option value="Malaysia">Malaysia</option>
+
+									<option value="Maldives">Maldives</option>
+
+									<option value="Mali">Mali</option>
+
+									<option value="Malta">Malta</option>
+
+									<option value="Marshall Islands">
+										Marshall Islands
+									</option>
+
+									<option value="Martinique">Martinique</option>
+
+									<option value="Mauritania">Mauritania</option>
+
+									<option value="Mauritius">Mauritius</option>
+
+									<option value="Mayotte">Mayotte</option>
+
+									<option value="Mexico">Mexico</option>
+
+									<option value="Micronesia, Federated States of">
+										Micronesia, Federated States of
+									</option>
+
+									<option value="Moldova, Republic of">
+										Moldova, Republic of
+									</option>
+
+									<option value="Monaco">Monaco</option>
+
+									<option value="Mongolia">Mongolia</option>
+
+									<option value="Montenegro">Montenegro</option>
+
+									<option value="Montserrat">Montserrat</option>
+
+									<option value="Morocco">Morocco</option>
+
+									<option value="Mozambique">Mozambique</option>
+
+									<option value="Myanmar">Myanmar</option>
+
+									<option value="Namibia">Namibia</option>
+
+									<option value="Nauru">Nauru</option>
+
+									<option value="Nepal">Nepal</option>
+
+									<option value="Netherlands">Netherlands</option>
+
+									<option value="Netherlands Antilles">
+										Netherlands Antilles
+									</option>
+
+									<option value="New Caledonia">New Caledonia</option>
+
+									<option value="New Zealand">New Zealand</option>
+
+									<option value="Nicaragua">Nicaragua</option>
+
+									<option value="Niger">Niger</option>
+
+									<option value="Nigeria">Nigeria</option>
+
+									<option value="Niue">Niue</option>
+
+									<option value="Norfolk Island">
+										Norfolk Island
+									</option>
+
+									<option value="Northern Mariana Islands">
+										Northern Mariana Islands
+									</option>
+
+									<option value="Norway">Norway</option>
+
+									<option value="Oman">Oman</option>
+
+									<option value="Pakistan">Pakistan</option>
+
+									<option value="Palau">Palau</option>
+
+									<option value="Palestinian Territory, Occupied">
+										Palestinian Territory, Occupied
+									</option>
+
+									<option value="Panama">Panama</option>
+
+									<option value="Papua New Guinea">
+										Papua New Guinea
+									</option>
+
+									<option value="Paraguay">Paraguay</option>
+
+									<option value="Peru">Peru</option>
+
+									<option value="Philippines">Philippines</option>
+
+									<option value="Pitcairn">Pitcairn</option>
+
+									<option value="Poland">Poland</option>
+
+									<option value="Portugal">Portugal</option>
+
+									<option value="Puerto Rico">Puerto Rico</option>
+
+									<option value="Qatar">Qatar</option>
+
+									<option value="Reunion">Reunion</option>
+
+									<option value="Romania">Romania</option>
+
+									<option value="Russian Federation">
+										Russian Federation
+									</option>
+
+									<option value="Rwanda">Rwanda</option>
+
+									<option value="Saint Helena">Saint Helena</option>
+
+									<option value="Saint Kitts and Nevis">
+										Saint Kitts and Nevis
+									</option>
+
+									<option value="Saint Lucia">Saint Lucia</option>
+
+									<option value="Saint Pierre and Miquelon">
+										Saint Pierre and Miquelon
+									</option>
+
+									<option value="Saint Vincent and The Grenadines">
+										Saint Vincent and The Grenadines
+									</option>
+
+									<option value="Samoa">Samoa</option>
+
+									<option value="San Marino">San Marino</option>
+
+									<option value="Sao Tome and Principe">
+										Sao Tome and Principe
+									</option>
+
+									<option value="Saudi Arabia">Saudi Arabia</option>
+
+									<option value="Senegal">Senegal</option>
+
+									<option value="Serbia">Serbia</option>
+
+									<option value="Seychelles">Seychelles</option>
+
+									<option value="Sierra Leone">Sierra Leone</option>
+
+									<option value="Singapore">Singapore</option>
+
+									<option value="Slovakia">Slovakia</option>
+
+									<option value="Slovenia">Slovenia</option>
+
+									<option value="Solomon Islands">
+										Solomon Islands
+									</option>
+
+									<option value="Somalia">Somalia</option>
+
+									<option value="South Africa">South Africa</option>
+
+									<option
+										value="South Georgia and The South Sandwich Islands"
+									>
+										South Georgia and The South Sandwich Islands
+									</option>
+
+									<option value="Spain">Spain</option>
+
+									<option value="Sri Lanka">Sri Lanka</option>
+
+									<option value="Sudan">Sudan</option>
+
+									<option value="Suriname">Suriname</option>
+
+									<option value="Svalbard and Jan Mayen">
+										Svalbard and Jan Mayen
+									</option>
+
+									<option value="Swaziland">Swaziland</option>
+
+									<option value="Sweden">Sweden</option>
+
+									<option value="Switzerland">Switzerland</option>
+
+									<option value="Syrian Arab Republic">
+										Syrian Arab Republic
+									</option>
+
+									<option value="Taiwan, Province of China">
+										Taiwan, Province of China
+									</option>
+
+									<option value="Tajikistan">Tajikistan</option>
+
+									<option value="Tanzania, United Republic of">
+										Tanzania, United Republic of
+									</option>
+
+									<option value="Thailand">Thailand</option>
+
+									<option value="Timor-leste">Timor-leste</option>
+
+									<option value="Togo">Togo</option>
+
+									<option value="Tokelau">Tokelau</option>
+
+									<option value="Tonga">Tonga</option>
+
+									<option value="Trinidad and Tobago">
+										Trinidad and Tobago
+									</option>
+
+									<option value="Tunisia">Tunisia</option>
+
+									<option value="Turkey">Turkey</option>
+
+									<option value="Turkmenistan">Turkmenistan</option>
+
+									<option value="Turks and Caicos Islands">
+										Turks and Caicos Islands
+									</option>
+
+									<option value="Tuvalu">Tuvalu</option>
+
+									<option value="Uganda">Uganda</option>
+
+									<option value="Ukraine">Ukraine</option>
+
+									<option value="United Arab Emirates">
+										United Arab Emirates
+									</option>
+
+									<option value="United Kingdom">
+										United Kingdom
+									</option>
+
+									<option value="United States">United States</option>
+
+									<option value="United States Minor Outlying Islands">
+										United States Minor Outlying Islands
+									</option>
+
+									<option value="Uruguay">Uruguay</option>
+
+									<option value="Uzbekistan">Uzbekistan</option>
+
+									<option value="Vanuatu">Vanuatu</option>
+
+									<option value="Venezuela">Venezuela</option>
+
+									<option value="Viet Nam">Viet Nam</option>
+
+									<option value="Virgin Islands, British">
+										Virgin Islands, British
+									</option>
+
+									<option value="Virgin Islands, U.S.">
+										Virgin Islands, U.S.
+									</option>
+
+									<option value="Wallis and Futuna">
+										Wallis and Futuna
+									</option>
+
+									<option value="Western Sahara">
+										Western Sahara
+									</option>
+
+									<option value="Yemen">Yemen</option>
+
+									<option value="Zambia">Zambia</option>
+
+									<option value="Zimbabwe">Zimbabwe</option>
+								</select>
+							</div>
+							<div id="form-agreement">
+								<p>
+									When you submit the form, we process the personal
+									data you provide. You can read more about Akbar
+									Abawi’s processing of your personal data and your
+									rights in our data policy.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div id="form-buttons">
+						<button
+							id="form-button-back"
+							class=""
+							type="button"
+							onclick="go_back()"
+						>
+							Back
+						</button>
+						<button
+							id="form-button-next"
+							class=""
+							type="button"
+							onclick="go_next()"
+						>
+							Next
+						</button>
+						<button
+							id="form-button-submit"
+							class="hidden"
+							type="submit"
+							onclick=""
+						>
+							Submit
+						</button>
+					</div>
+				</form>
+
+				<script>
+					function setQ1(value) {
+						document.getElementById('q1').value = value;
+					}
+
+					function setQ4(value) {
+						document.getElementById('q4').value = value;
+					}
+				</script>
+
+				<div id="form-post-container" class="flex hidden">
+					<div id="form-post">
+						<i class="gg-check-o"></i>
+						<h3>The first step is in the bag! High-fives all around!</h3>
+						<p>
+							Well done, the first step has been taken. I will contact
+							you within 48 hours. I'm looking forward to it! Looking
+							forward to having you a part of my team very soon!
+						</p>
+						<div class="employee-signature">
+							<img src="res/images/signature.png" alt="signature" />
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="section-container flex main-bg">
+			<section id="slogan" class="section">
+				<div class="click-me">
+					<img
+						src="res/images/click and find out more.png"
+						alt="click me"
+					/>
+				</div>
+				<div id="slogan-container" class="container flex-wrap">
+					<h2
+						id="slogan-word-busy"
+						class="selected"
+						onclick='unhide_elem("busy-slogan"), hide_elem("being-slogan"), hide_elem("boring-slogan"),
             addClass("slogan-word-busy", "selected"), removeClass("slogan-word-being", "selected"), removeClass("slogan-word-boring", "selected")
             addClass("slogan-word-busy-span", "selected"), removeClass("slogan-word-being-span", "selected"), removeClass("slogan-word-boring-span", "selected")'
-          >
-            <span id="slogan-word-busy-span" class="selected">Bu</span>sy
-          </h2>
-          <h2
-            id="slogan-word-being"
-            onclick='hide_elem("busy-slogan"), unhide_elem("being-slogan"), hide_elem("boring-slogan"),
+					>
+						<span id="slogan-word-busy-span" class="selected">Bu</span>sy
+					</h2>
+					<h2
+						id="slogan-word-being"
+						onclick='hide_elem("busy-slogan"), unhide_elem("being-slogan"), hide_elem("boring-slogan"),
             removeClass("slogan-word-busy", "selected"), addClass("slogan-word-being", "selected"), removeClass("slogan-word-boring", "selected")
             removeClass("slogan-word-busy-span", "selected"), addClass("slogan-word-being-span", "selected"), removeClass("slogan-word-boring-span", "selected")'
-          >
-            <span id="slogan-word-being-span">Be</span>ing
-          </h2>
-          <h2
-            id="slogan-word-boring"
-            onclick='hide_elem("busy-slogan"), hide_elem("being-slogan"), unhide_elem("boring-slogan"),
+					>
+						<span id="slogan-word-being-span">Be</span>ing
+					</h2>
+					<h2
+						id="slogan-word-boring"
+						onclick='hide_elem("busy-slogan"), hide_elem("being-slogan"), unhide_elem("boring-slogan"),
             removeClass("slogan-word-busy", "selected"), removeClass("slogan-word-being", "selected"), addClass("slogan-word-boring", "selected")
             removeClass("slogan-word-busy-span", "selected"), removeClass("slogan-word-being-span", "selected"), addClass("slogan-word-boring-span", "selected")'
-          >
-            <span id="slogan-word-boring-span">Bo</span>ring
-          </h2>
-          <p id="busy-slogan" class="slogan-text">
-            "AAA We all feel pressure through social media or others, we
-            challenge you to be a better version of yourself."
-          </p>
-          <p id="being-slogan" class="slogan-text hidden">
-            "BBB We all feel pressure through social media or others, we
-            challenge you to be a better version of yourself."
-          </p>
+					>
+						<span id="slogan-word-boring-span">Bo</span>ring
+					</h2>
+					<p id="busy-slogan" class="slogan-text">
+						"We all feel pressure through social media or others, we
+						challenge you to be a better version of yourself."
+					</p>
+					<p id="being-slogan" class="slogan-text hidden">
+						"We all feel pressure through social media or others, we
+						challenge you to be a better version of yourself."
+					</p>
 
-          <p id="boring-slogan" class="slogan-text hidden">
-            "CCC We all feel pressure through social media or others, we
-            challenge you to be a better version of yourself."
-          </p>
-        </div>
-      </section>
-    </div>
-    <div class="section-container section-container-desk-wide alt-bg">
-      <section id="clients" class="section">
-        <h1>Client Transformations</h1>
-        <div class="gallery js-flickity mobile-only">
-          <div class="gallery-cell">
-            <img src="res/images/clients/client_1.png" alt="Client A" />
-          </div>
-          <div class="gallery-cell">
-            <img src="res/images/clients/client_2.png" alt="Client B" />
-          </div>
-          <div class="gallery-cell">
-            <img src="res/images/clients/client_3.png" alt="Client C" />
-          </div>
-        </div>
+					<p id="boring-slogan" class="slogan-text hidden">
+						"We all feel pressure through social media or others, we
+						challenge you to be a better version of yourself."
+					</p>
+				</div>
+			</section>
+		</div>
+		<div class="section-container section-container-desk-wide alt-bg">
+			<section id="clients" class="section">
+				<h1>Client Transformations</h1>
+				<div class="gallery js-flickity mobile-only">
+					<div class="gallery-cell">
+						<img src="res/images/clients/client_1.png" alt="Client A" />
+					</div>
+					<div class="gallery-cell">
+						<img src="res/images/clients/client_2.png" alt="Client B" />
+					</div>
+					<div class="gallery-cell">
+						<img src="res/images/clients/client_3.png" alt="Client C" />
+					</div>
+				</div>
 
-        <div class="container flex-row desktop-only m-auto">
-          <div class="gallery-cell lift">
-            <img src="res/images/clients/client_1.png" alt="Client A" />
-          </div>
-          <div class="gallery-cell drop">
-            <img src="res/images/clients/client_2.png" alt="Client B" />
-          </div>
-          <div class="gallery-cell lift">
-            <img src="res/images/clients/client_3.png" alt="Client C" />
-          </div>
-        </div>
-      </section>
-    </div>
+				<div class="container flex-row desktop-only m-auto">
+					<div class="gallery-cell lift">
+						<img src="res/images/clients/client_1.png" alt="Client A" />
+					</div>
+					<div class="gallery-cell drop">
+						<img src="res/images/clients/client_2.png" alt="Client B" />
+					</div>
+					<div class="gallery-cell lift">
+						<img src="res/images/clients/client_3.png" alt="Client C" />
+					</div>
+				</div>
+			</section>
+		</div>
 
-    <div
-      id="offer-container"
-      class="section-container section-container-desk-wide main-bg"
-    >
-      <section id="offer" class="section">
-        <div class="mobile-only">
-          <h1>What do you get</h1>
-          <div class="gallery js-flickity">
-            <div class="gallery-cell">
-              <div class="gallery-cell-top">
-                <img src="res/images/offers/offer_1.png" alt="Training" />
-              </div>
-              <div class="gallery-cell-bot">
-                <h5>Training</h5>
-                <p>
-                  A customized plan for you to suit you anytime and anywhere.
-                </p>
-              </div>
-            </div>
-            <div class="gallery-cell">
-              <div class="gallery-cell-top">
-                <img src="res/images/offers/offer_2.png" alt="Nutrition" />
-              </div>
-              <div class="gallery-cell-bot">
-                <h5>Nutrition</h5>
-                <p>Your custom meal plan is made for a healthy lifestyle.</p>
-              </div>
-            </div>
-            <div class="gallery-cell">
-              <div class="gallery-cell-top">
-                <img
-                  src="res/images/offers/offer_3.png"
-                  alt="Progress tracking"
-                />
-              </div>
-              <div class="gallery-cell-bot">
-                <h5>Progress tracking</h5>
-                <p>
-                  We track your progress through weekly check-ins to ensure you
-                  stay on track with your goals.
-                </p>
-              </div>
-            </div>
-            <div class="gallery-cell">
-              <div class="gallery-cell-top">
-                <img
-                  src="res/images/offers/offer_4.png"
-                  alt="Continuous communication"
-                />
-              </div>
-              <div class="gallery-cell-bot">
-                <h5>Continuous communication</h5>
-                <p>
-                  I am always only a text away for accountability and support.
-                  We got this!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+		<div
+			id="offer-container"
+			class="section-container section-container-desk-wide main-bg"
+		>
+			<section id="offer" class="section">
+				<div class="mobile-only">
+					<h1>What do you get</h1>
+					<div class="gallery js-flickity">
+						<div class="gallery-cell">
+							<div class="gallery-cell-top">
+								<img
+									src="res/images/offers/offer_1.png"
+									alt="Training"
+								/>
+							</div>
+							<div class="gallery-cell-bot">
+								<h5>Training</h5>
+								<p>
+									A customized plan for you to suit you anytime and
+									anywhere.
+								</p>
+							</div>
+						</div>
+						<div class="gallery-cell">
+							<div class="gallery-cell-top">
+								<img
+									src="res/images/offers/offer_2.png"
+									alt="Nutrition"
+								/>
+							</div>
+							<div class="gallery-cell-bot">
+								<h5>Nutrition</h5>
+								<p>
+									Your custom meal plan is made for a healthy
+									lifestyle.
+								</p>
+							</div>
+						</div>
+						<div class="gallery-cell">
+							<div class="gallery-cell-top">
+								<img
+									src="res/images/offers/offer_3.png"
+									alt="Progress tracking"
+								/>
+							</div>
+							<div class="gallery-cell-bot">
+								<h5>Progress tracking</h5>
+								<p>
+									We track your progress through weekly check-ins to
+									ensure you stay on track with your goals.
+								</p>
+							</div>
+						</div>
+						<div class="gallery-cell">
+							<div class="gallery-cell-top">
+								<img
+									src="res/images/offers/offer_4.png"
+									alt="Continuous communication"
+								/>
+							</div>
+							<div class="gallery-cell-bot">
+								<h5>Continuous communication</h5>
+								<p>
+									I am always only a text away for accountability and
+									support. We got this!
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <div class="desktop-only container flex-row m-auto">
-          <div id="offer-entree-images" class="container flex-col">
-            <img
-              id="offer-entree-image-1"
-              class=""
-              src="res/images/offers/offer_1.png"
-              alt="Training"
-            />
-            <img
-              id="offer-entree-image-2"
-              class="hidden"
-              src="res/images/offers/offer_2.png"
-              alt="Nutrition"
-            />
-            <img
-              id="offer-entree-image-3"
-              class="hidden"
-              src="res/images/offers/offer_3.png"
-              alt="Progress tracking"
-            />
-            <img
-              id="offer-entree-image-4"
-              class="hidden"
-              src="res/images/offers/offer_4.png"
-              alt="Continuous communication"
-            />
-          </div>
-          <div id="offer-entree-texts" class="container flex-col">
-            <h1>What do you get</h1>
-            <div
-              id="offer-entree-text-1"
-              class="offer-entree-text selected"
-              onclick='addClass("offer-entree-text-1", "selected") 
+				<div class="desktop-only container flex-row m-auto">
+					<div id="offer-entree-images" class="container flex-col">
+						<img
+							id="offer-entree-image-1"
+							class=""
+							src="res/images/offers/offer_1.png"
+							alt="Training"
+						/>
+						<img
+							id="offer-entree-image-2"
+							class="hidden"
+							src="res/images/offers/offer_2.png"
+							alt="Nutrition"
+						/>
+						<img
+							id="offer-entree-image-3"
+							class="hidden"
+							src="res/images/offers/offer_3.png"
+							alt="Progress tracking"
+						/>
+						<img
+							id="offer-entree-image-4"
+							class="hidden"
+							src="res/images/offers/offer_4.png"
+							alt="Continuous communication"
+						/>
+					</div>
+					<div id="offer-entree-texts" class="container flex-col">
+						<h1>What do you get</h1>
+						<div
+							id="offer-entree-text-1"
+							class="offer-entree-text selected"
+							onclick='addClass("offer-entree-text-1", "selected") 
               removeClass("offer-entree-text-2", "selected")
               removeClass("offer-entree-text-3", "selected")
               removeClass("offer-entree-text-4", "selected")
@@ -357,14 +1022,17 @@
               hide_elem("offer-entree-image-3", "selected") 
               hide_elem("offer-entree-image-4", "selected") 
               '
-            >
-              <h5>Training</h5>
-              <p>A customized plan for you to suit you anytime and anywhere.</p>
-            </div>
-            <div
-              id="offer-entree-text-2"
-              class="offer-entree-text"
-              onclick='removeClass("offer-entree-text-1", "selected") 
+						>
+							<h5>Training</h5>
+							<p>
+								A customized plan for you to suit you anytime and
+								anywhere.
+							</p>
+						</div>
+						<div
+							id="offer-entree-text-2"
+							class="offer-entree-text"
+							onclick='removeClass("offer-entree-text-1", "selected") 
             addClass("offer-entree-text-2", "selected")
             removeClass("offer-entree-text-3", "selected")
             removeClass("offer-entree-text-4", "selected")
@@ -373,14 +1041,16 @@
             hide_elem("offer-entree-image-3", "selected") 
             hide_elem("offer-entree-image-4", "selected") 
             '
-            >
-              <h5>Nutrition</h5>
-              <p>Your custom meal plan is made for a healthy lifestyle.</p>
-            </div>
-            <div
-              id="offer-entree-text-3"
-              class="offer-entree-text"
-              onclick='removeClass("offer-entree-text-1", "selected") 
+						>
+							<h5>Nutrition</h5>
+							<p>
+								Your custom meal plan is made for a healthy lifestyle.
+							</p>
+						</div>
+						<div
+							id="offer-entree-text-3"
+							class="offer-entree-text"
+							onclick='removeClass("offer-entree-text-1", "selected") 
             removeClass("offer-entree-text-2", "selected")
             addClass("offer-entree-text-3", "selected")
             removeClass("offer-entree-text-4", "selected")
@@ -389,17 +1059,17 @@
             unhide_elem("offer-entree-image-3", "selected") 
             hide_elem("offer-entree-image-4", "selected") 
             '
-            >
-              <h5>Progress tracking</h5>
-              <p>
-                We track your progress through weekly check-ins to ensure you
-                stay on track with your goals.
-              </p>
-            </div>
-            <div
-              id="offer-entree-text-4"
-              class="offer-entree-text"
-              onclick='removeClass("offer-entree-text-1", "selected") 
+						>
+							<h5>Progress tracking</h5>
+							<p>
+								We track your progress through weekly check-ins to
+								ensure you stay on track with your goals.
+							</p>
+						</div>
+						<div
+							id="offer-entree-text-4"
+							class="offer-entree-text"
+							onclick='removeClass("offer-entree-text-1", "selected") 
             removeClass("offer-entree-text-2", "selected")
             removeClass("offer-entree-text-3", "selected")
             addClass("offer-entree-text-4", "selected")
@@ -408,303 +1078,338 @@
             hide_elem("offer-entree-image-3", "selected") 
             unhide_elem("offer-entree-image-4", "selected") 
             '
-            >
-              <h5>Continuous communication</h5>
-              <p>
-                I am always only a text away for accountability and support. We
-                got this!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="everfit" class="container">
-          <img src="res/images/everfit.png" alt="everfit" />
-        </div>
-      </section>
-    </div>
+						>
+							<h5>Continuous communication</h5>
+							<p>
+								I am always only a text away for accountability and
+								support. We got this!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="everfit" class="container">
+					<img src="res/images/everfit.png" alt="everfit" />
+				</div>
+			</section>
+		</div>
 
-    <div id="howto-section-container" class="section-container flex alt-bg">
-      <section id="howto" class="section">
-        <h3>Where to start?</h3>
-        <div id="howto-step1" class="step right">
-          <h3 class="step-id">Step 1</h3>
-          <div class="circle right">
-            <img class="right" src="res\ico\step1.svg" />
-          </div>
-          <div class="block right">
-            <h5 class="right">Fill out the form</h5>
-            <p class="right">
-              To start this journey, complete my form so we can get in touch!
-            </p>
-            <div class="go-to-form">
-              <img src="res/images/go to form.png" alt="go-to-form" />
-            </div>
-          </div>
-        </div>
+		<div id="howto-section-container" class="section-container flex alt-bg">
+			<section id="howto" class="section">
+				<h3>Where to start?</h3>
+				<div id="howto-step1" class="step right">
+					<h3 class="step-id">Step 1</h3>
+					<div class="circle right">
+						<img class="right" src="res\ico\step1.svg" />
+					</div>
+					<div class="block right">
+						<h5 class="right">Fill out the form</h5>
+						<p class="right">
+							To start this journey, complete my form so we can get in
+							touch!
+						</p>
+						<div class="go-to-form">
+							<img
+								src="res/images/go to form.png"
+								alt="go-to-form"
+								onclick="scrollToElement('registration-form');"
+							/>
+						</div>
+					</div>
+				</div>
 
-        <div id="howto-step2" class="step left">
-          <div class="block left">
-            <h5 class="left">Phone call</h5>
-            <p class="left">
-              Expect to have a call within 48 hours to discuss the best plan for
-              you to reach your goals.
-            </p>
-          </div>
-          <div class="circle left">
-            <img class="left" src="res\ico\step2.svg" />
-          </div>
-          <h3 class="step-id">Step 2</h3>
-        </div>
+				<script>
+					function scrollToElement(elementId) {
+						var element = document.getElementById(elementId);
 
-        <div id="howto-step3" class="step right">
-          <h3 class="step-id">Step 3</h3>
-          <div class="circle right">
-            <img class="right" src="res\ico\step3.svg" />
-          </div>
-          <div class="block right">
-            <h5 class="right">Coaching</h5>
-            <p class="right">
-              We work together to form healthy and sustainable habits.
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+						if (element) {
+							var elementRect = element.getBoundingClientRect();
+							var absoluteElementTop =
+								elementRect.top + window.pageYOffset;
+							var middle = absoluteElementTop - window.innerHeight / 2;
 
-    <div
-      id="employee-container"
-      class="section-container section-container-desk-wide flex main-bg"
-    >
-      <section id="employee" class="section">
-        <div id="employee-container-container" class="container">
-          <div class="employee-description">
-            <h1>Meet Ak!</h1>
-            <p>
-              My love and passion for health & fitness and helping you reach
-              your goals gives me energy. My mission is to challenge you to
-              realise your potential. We will work hard, go inward to claim the
-              greatness we long for, and attain immense confidence and
-              self-love. Let’s get to work!
-            </p>
-            <br />
-            <p>
-              Online coaching allows you to reach your goals whilst having me as
-              your coach from anywhere. Developing a healthy, active lifestyle
-              with your busy schedule and other responsibilities is now
-              realistic and sustainable with my system. I will be there every
-              step of the way to guide you, motivate you, and hold you
-              accountable for the goals you are more than capable of achieving.
-            </p>
-            <div class="employee-signature">
-              <img src="res/images/signature.png" alt="signature" />
-            </div>
-          </div>
-          <div class="employee-image">
-            <img src="res/images/employees/ak.png" alt="Akbar Abawi" />
-          </div>
-        </div>
-      </section>
-    </div>
+							window.scrollTo({
+								top: middle,
+								behavior: 'smooth',
+							});
+						}
+					}
+				</script>
 
-    <div class="section-container flex alt-bg">
-      <section id="faq" class="section">
-        <h1>FAQ</h1>
-        <div class="faq">
-          <div class="faq-item">
-            <button id="faq-button-1" aria-expanded="false">
-              <span class="faq-question"
-                >What can I expect from working with you?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                You can expect a personalised experience. I want to create
-                relationships with all my clients so I can help you work hard on
-                what you need to work on today. It won’t be numbers driven only.
-                When you join my team, we will change your lifestyle profoundly.
-                Your training and nutrition will be sustainable, consistent and,
-                most importantly, enjoyable. A personalised check-in process
-                will ensure that you are moving towards your goals, and through
-                our communication, I can support you on every step of your
-                journey.
-              </p>
-            </div>
-          </div>
+				<div id="howto-step2" class="step left">
+					<div class="block left">
+						<h5 class="left">Phone call</h5>
+						<p class="left">
+							Expect to have a call within 48 hours to discuss the best
+							plan for you to reach your goals.
+						</p>
+					</div>
+					<div class="circle left">
+						<img class="left" src="res\ico\step2.svg" />
+					</div>
+					<h3 class="step-id">Step 2</h3>
+				</div>
 
-          <div class="faq-item">
-            <button id="faq-button-2" aria-expanded="false">
-              <span class="faq-question"
-                >I already have a Personal Trainer. Is this for me?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                I aim to be the best online personal training on the market – at
-                any price and for anyone. Give it a try, compare it to your
-                current use, and let me know what you think. As someone already
-                well-versed in fitness, your opinion is incredibly important,
-                and I want to hear it.
-              </p>
-            </div>
-          </div>
+				<div id="howto-step3" class="step right">
+					<h3 class="step-id">Step 3</h3>
+					<div class="circle right">
+						<img class="right" src="res\ico\step3.svg" />
+					</div>
+					<div class="block right">
+						<h5 class="right">Coaching</h5>
+						<p class="right">
+							We work together to form healthy and sustainable habits.
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
 
-          <div class="faq-item">
-            <button id="faq-button-3" aria-expanded="false">
-              <span class="faq-question"
-                >I’m not too familiar with fitness. Is this for me?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                100%. We’ve all had a different discovery moment, and I want
-                Minimalism Training to be that for you. I’ve built the
-                experience to be simple, minimalistic, easy, satisfying and,
-                above all else, effective. It works and should be the only thing
-                you need to reach your goals.
-              </p>
-            </div>
-          </div>
+		<div
+			id="employee-container"
+			class="section-container section-container-desk-wide flex main-bg"
+		>
+			<section id="employee" class="section">
+				<div id="employee-container-container" class="container">
+					<div class="employee-description">
+						<h1>Meet Ak!</h1>
+						<p>
+							My love and passion for health & fitness and helping you
+							reach your goals gives me energy. My mission is to
+							challenge you to realise your potential. We will work hard,
+							go inward to claim the greatness we long for, and attain
+							immense confidence and self-love. Let’s get to work!
+						</p>
+						<br />
+						<p>
+							Online coaching allows you to reach your goals whilst
+							having me as your coach from anywhere. Developing a
+							healthy, active lifestyle with your busy schedule and other
+							responsibilities is now realistic and sustainable with my
+							system. I will be there every step of the way to guide you,
+							motivate you, and hold you accountable for the goals you
+							are more than capable of achieving.
+						</p>
+						<div class="employee-signature">
+							<img src="res/images/signature.png" alt="signature" />
+						</div>
+					</div>
+					<div class="employee-image">
+						<img src="res/images/employees/ak.png" alt="Akbar Abawi" />
+					</div>
+				</div>
+			</section>
+		</div>
 
-          <div class="faq-item">
-            <button id="faq-button-4" aria-expanded="false">
-              <span class="faq-question">How much does it cost?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                All my clients receive bespoke and tailored plans alongside my
-                ongoing support and guidance. Prices will vary depending on your
-                commitment period and goals; however, multiple packages are
-                available to suit all budgets.
-              </p>
-            </div>
-          </div>
+		<div class="section-container flex alt-bg">
+			<section id="faq" class="section">
+				<h1>FAQ</h1>
+				<div class="faq">
+					<div class="faq-item">
+						<button id="faq-button-1" aria-expanded="false">
+							<span class="faq-question"
+								>What can I expect from working with you?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								You can expect a personalised experience. I want to
+								create relationships with all my clients so I can help
+								you work hard on what you need to work on today. It
+								won’t be numbers driven only. When you join my team, we
+								will change your lifestyle profoundly. Your training and
+								nutrition will be sustainable, consistent and, most
+								importantly, enjoyable. A personalised check-in process
+								will ensure that you are moving towards your goals, and
+								through our communication, I can support you on every
+								step of your journey.
+							</p>
+						</div>
+					</div>
 
-          <div class="faq-item">
-            <button id="faq-button-5" aria-expanded="false">
-              <span class="faq-question"
-                >What will my meal plan look like? Do you cater for dietary
-                restrictions?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Your nutrition is the most important part of your new journey.
-                Plans should be sustainable and enjoyable. I want to help you to
-                make lifestyle changes rather than simply adhering to boring or
-                strict diets! To achieve the desired results, it is important to
-                create a healthy balance between having a good relationship with
-                food and understanding what you must pay attention to (i.e.
-                portion sizes, calories, macros). Also, we will facilitate any
-                allergies or dietary restrictions you might have (i.e. coeliac,
-                lactose intolerant or vegan).
-              </p>
-            </div>
-          </div>
+					<div class="faq-item">
+						<button id="faq-button-2" aria-expanded="false">
+							<span class="faq-question"
+								>I already have a Personal Trainer. Is this for
+								me?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								I aim to be the best online personal training on the
+								market – at any price and for anyone. Give it a try,
+								compare it to your current use, and let me know what you
+								think. As someone already well-versed in fitness, your
+								opinion is incredibly important, and I want to hear it.
+							</p>
+						</div>
+					</div>
 
-          <div class="faq-item">
-            <button id="faq-button-6" aria-expanded="false">
-              <span class="faq-question"
-                >Can I track my progress and update my measurements?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                You can track all progress and measurements through my app on
-                your phone. This includes photos, body measurements, weigh-ins,
-                diet or water intake. That way, I can monitor your progress and
-                make any necessary adjustments to your goals or plans.
-              </p>
-            </div>
-          </div>
+					<div class="faq-item">
+						<button id="faq-button-3" aria-expanded="false">
+							<span class="faq-question"
+								>I’m not too familiar with fitness. Is this for
+								me?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								100%. We’ve all had a different discovery moment, and I
+								want Minimalism Training to be that for you. I’ve built
+								the experience to be simple, minimalistic, easy,
+								satisfying and, above all else, effective. It works and
+								should be the only thing you need to reach your goals.
+							</p>
+						</div>
+					</div>
 
-          <div class="faq-item">
-            <button id="faq-button-7" aria-expanded="false">
-              <span class="faq-question">Can I train from home?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Of course, you can! I can create a plan around your preferred
-                location and fit around your goals and lifestyle.
-              </p>
-            </div>
-          </div>
+					<div class="faq-item">
+						<button id="faq-button-4" aria-expanded="false">
+							<span class="faq-question">How much does it cost?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								All my clients receive bespoke and tailored plans
+								alongside my ongoing support and guidance. Prices will
+								vary depending on your commitment period and goals;
+								however, multiple packages are available to suit all
+								budgets.
+							</p>
+						</div>
+					</div>
 
-          <div class="faq-item">
-            <button id="faq-button-8" aria-expanded="false">
-              <span class="faq-question"
-                >How often should I exercise per week?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                You decide how much time per week you have for training and your
-                goal. Together we will make a plan so that exercising fits into
-                your routine in the best possible way.
-              </p>
-            </div>
-          </div>
+					<div class="faq-item">
+						<button id="faq-button-5" aria-expanded="false">
+							<span class="faq-question"
+								>What will my meal plan look like? Do you cater for
+								dietary restrictions?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								Your nutrition is the most important part of your new
+								journey. Plans should be sustainable and enjoyable. I
+								want to help you to make lifestyle changes rather than
+								simply adhering to boring or strict diets! To achieve
+								the desired results, it is important to create a healthy
+								balance between having a good relationship with food and
+								understanding what you must pay attention to (i.e.
+								portion sizes, calories, macros). Also, we will
+								facilitate any allergies or dietary restrictions you
+								might have (i.e. coeliac, lactose intolerant or vegan).
+							</p>
+						</div>
+					</div>
 
-          <div class="faq-item">
-            <button id="faq-button-9" aria-expanded="false">
-              <span class="faq-question"
-                >How soon can I expect to see results?</span
-              ><span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Everyone’s body reacts and adapts to exercise differently so
-                that we will work with you at the best pace for you. The
-                training will be broken down into phases of 6 weeks to ensure
-                you progress towards your goals and training at the right
-                intensity. For the first part of the program, you will commit to
-                at least 12 weeks to ensure we can obtain noticeable progress. I
-                have had some clients achieve the results they’ve wanted in a
-                matter of weeks, some in a matter of months – both dropping vast
-                amounts of body fat, but all at different rates. Results depend
-                on numerous factors like your tailored nutrition and workout
-                plans, commitment in- and outside the gym and how much work you
-                put in. If you are willing to commit fully, I can guarantee that
-                you will make progress. You do not have to be perfect; just be
-                better than you are now.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+					<div class="faq-item">
+						<button id="faq-button-6" aria-expanded="false">
+							<span class="faq-question"
+								>Can I track my progress and update my
+								measurements?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								You can track all progress and measurements through my
+								app on your phone. This includes photos, body
+								measurements, weigh-ins, diet or water intake. That way,
+								I can monitor your progress and make any necessary
+								adjustments to your goals or plans.
+							</p>
+						</div>
+					</div>
 
-    <div class="section-container section-container-desk-wide flex main-bg">
-      <section id="foot" class="section">
-        <div id="logo-foot" class="container">
-          <img src="res/images/logo.png" alt="logo" />
-        </div>
-        <hr />
-        <div id="foot-container" class="container">
-          <div id="terms" class="container">
-            <h6>Terms and conditions</h6>
-            <h6>Privacy Policy</h6>
-          </div>
-          <div class="container social-icons">
-            <img class="social-icon" src="res\ico\insta.svg" />
-            <img class="social-icon" src="res\ico\tiktok.svg" />
-          </div>
-          <div id="terms" class="container">
-            <p>Made with passion 🔥 in the Netherlands</p>
-            <p>© Minimalismtraining 2023.</p>
-            <p>All rights reserved.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  </body>
-  <script src="dep/js/circletype.min.js"></script>
-  <script src="dep/js/flickity.pkgd.min.js"></script>
-  <script src="dist/form.js"></script>
-  <script src="dist/faq.js"></script>
-  <script>
-    new CircleType(document.getElementById('logo1')).radius(300);
-    new CircleType(document.getElementById('logo-foot')).radius(300);
-  </script>
+					<div class="faq-item">
+						<button id="faq-button-7" aria-expanded="false">
+							<span class="faq-question">Can I train from home?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								Of course, you can! I can create a plan around your
+								preferred location and fit around your goals and
+								lifestyle.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button id="faq-button-8" aria-expanded="false">
+							<span class="faq-question"
+								>How often should I exercise per week?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								You decide how much time per week you have for training
+								and your goal. Together we will make a plan so that
+								exercising fits into your routine in the best possible
+								way.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button id="faq-button-9" aria-expanded="false">
+							<span class="faq-question"
+								>How soon can I expect to see results?</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+						<div class="faq-answer">
+							<p>
+								Everyone’s body reacts and adapts to exercise
+								differently so that we will work with you at the best
+								pace for you. The training will be broken down into
+								phases of 6 weeks to ensure you progress towards your
+								goals and training at the right intensity. For the first
+								part of the program, you will commit to at least 12
+								weeks to ensure we can obtain noticeable progress. I
+								have had some clients achieve the results they’ve wanted
+								in a matter of weeks, some in a matter of months – both
+								dropping vast amounts of body fat, but all at different
+								rates. Results depend on numerous factors like your
+								tailored nutrition and workout plans, commitment in- and
+								outside the gym and how much work you put in. If you are
+								willing to commit fully, I can guarantee that you will
+								make progress. You do not have to be perfect; just be
+								better than you are now.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="section-container section-container-desk-wide flex main-bg">
+			<section id="foot" class="section">
+				<div id="logo-foot" class="container">
+					<img src="res/images/logo.png" alt="logo" />
+				</div>
+				<hr />
+				<div id="foot-container" class="container">
+					<div id="terms" class="container">
+						<h6>Terms and conditions</h6>
+						<h6>Privacy Policy</h6>
+					</div>
+					<div class="container social-icons">
+						<img class="social-icon" src="res\ico\insta.svg" />
+						<img class="social-icon" src="res\ico\tiktok.svg" />
+					</div>
+					<div id="terms" class="container">
+						<p>Made with passion 🔥 in the Netherlands</p>
+						<p>© Minimalismtraining 2023.</p>
+						<p>All rights reserved.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script src="dep/js/circletype.min.js"></script>
+	<script src="dep/js/flickity.pkgd.min.js"></script>
+	<script src="dist/form.js"></script>
+	<script src="dist/faq.js"></script>
+	<script>
+		new CircleType(document.getElementById('logo1')).radius(300);
+		new CircleType(document.getElementById('logo-foot')).radius(300);
+	</script>
 </html>

@@ -7,6 +7,7 @@ window.onload = function () {
     // Add click event listener to each button
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
+            var _a;
             // Remove 'selected' class from all buttons
             buttons.forEach((inner_button) => {
                 if (inner_button.id.substring(0, 2) == button.id.substring(0, 2)) {
@@ -15,7 +16,7 @@ window.onload = function () {
             });
             // Add 'selected' class to the clicked button
             button.classList.add('selected');
-            completedPages = JSON.parse(sessionStorage.getItem('completedPages') ?? '[]');
+            completedPages = JSON.parse((_a = sessionStorage.getItem('completedPages')) !== null && _a !== void 0 ? _a : '[]');
             current_form_page = Number(sessionStorage.getItem('current_form_page'));
             if (completedPages.includes(current_form_page) == false) {
                 completedPages.push(current_form_page);
@@ -69,7 +70,8 @@ window.onload = function () {
     sessionStorage.setItem('current_form_page', String(current_form_page));
 };
 function complete_section() {
-    const completedPages = JSON.parse(sessionStorage.getItem('completedPages') ?? '[]');
+    var _a;
+    const completedPages = JSON.parse((_a = sessionStorage.getItem('completedPages')) !== null && _a !== void 0 ? _a : '[]');
     const current_form_page = Number(sessionStorage.getItem('current_form_page'));
     if (completedPages.includes(current_form_page) == false) {
         completedPages.push(current_form_page);
@@ -81,7 +83,8 @@ function complete_section() {
     sessionStorage.setItem('completedPages', JSON.stringify(completedPages));
 }
 function update_progress() {
-    const completedPages = JSON.parse(sessionStorage.getItem('completedPages') ?? '[]');
+    var _a;
+    const completedPages = JSON.parse((_a = sessionStorage.getItem('completedPages')) !== null && _a !== void 0 ? _a : '[]');
     const current_form_page = Number(sessionStorage.getItem('current_form_page'));
     // Update Progress
     [1, 2, 3, 4, 5].forEach((id) => {
@@ -111,15 +114,23 @@ function update_progress() {
     }
 }
 function go_next() {
-    const completedPages = JSON.parse(sessionStorage.getItem('completedPages') ?? '[]');
+    var _a;
+    const completedPages = JSON.parse((_a = sessionStorage.getItem('completedPages')) !== null && _a !== void 0 ? _a : '[]');
     let current_form_page = Number(sessionStorage.getItem('current_form_page'));
     if (completedPages.includes(current_form_page)) {
         hide_elem('form-q'.concat(current_form_page.toString()));
         if (current_form_page == 5) {
+            const registrationForm = document.getElementById('registration-form');
+            const actionUrl = registrationForm.action;
+            window.open(actionUrl, '_blank');
             hide_elem('form-progress');
             hide_elem('form-qs');
             hide_elem('form-buttons');
             unhide_elem('form-post-container');
+        }
+        if (current_form_page == 4) {
+            hide_elem('form-button-next');
+            unhide_elem('form-button-submit');
         }
         if (current_form_page < 5) {
             current_form_page += 1;
@@ -131,6 +142,10 @@ function go_next() {
 }
 function go_back() {
     let current_form_page = Number(sessionStorage.getItem('current_form_page'));
+    if (current_form_page == 5) {
+        unhide_elem('form-button-next');
+        hide_elem('form-button-submit');
+    }
     if (current_form_page > 1) {
         hide_elem('form-q'.concat(current_form_page.toString()));
         current_form_page -= 1;

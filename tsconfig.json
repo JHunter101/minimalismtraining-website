@@ -1,5 +1,5 @@
 {
-  "extends": "../node_modules/@tsconfig/recommended/tsconfig.json",
+  "extends": "../../node_modules/@tsconfig/recommended/tsconfig.json",
   "tasks": [
     {
       "type": "typescript",
@@ -12,14 +12,12 @@
     }
   ],
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "newLine": "LF",
-    "outDir": "./dist/",
-    "strict": true,
-    "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true
+    "target": "es6",
+    "module": "es6",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "dep/**/*.ts"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.cdnfonts.com/css/kulim-park');
+
 /*-------------------------------------------------------------- # Base Section Start--------------------------------------------------------------*/
 :root {
   --main-bg-color: #e5e0da;
